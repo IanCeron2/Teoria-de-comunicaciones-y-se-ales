@@ -9,10 +9,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.StringTokenizer;
 import java.util.ArrayList;
-/**
- *
- * @author ararage_kun
- */
+
 public class Senales extends javax.swing.JFrame {
 
     int ra,a,b,vec[], ivec[];
@@ -39,21 +36,17 @@ public class Senales extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Resultado = new javax.swing.JTextArea();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         Responde = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         Gn = new javax.swing.JTextField();
         Hn = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        OrigenG = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        OrigenH = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -74,6 +67,7 @@ public class Senales extends javax.swing.JFrame {
         valorInt2 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         Refleja = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -115,12 +109,6 @@ public class Senales extends javax.swing.JFrame {
         Resultado.setRows(5);
         jScrollPane1.setViewportView(Resultado);
 
-        jLabel3.setText("Beta Ver 0.3");
-
-        jLabel4.setText("Especifique la coordenada del origen de ");
-
-        jLabel7.setText("izquieda a derecha empezando por el 0.");
-
         Responde.setEditable(false);
         Responde.setBackground(new java.awt.Color(254, 254, 254));
         Responde.addActionListener(new java.awt.event.ActionListener() {
@@ -134,16 +122,6 @@ public class Senales extends javax.swing.JFrame {
         jLabel1.setText("g(n) = ");
 
         jLabel2.setText("h(n)=");
-
-        jLabel6.setText("Origen g(n) =");
-
-        jLabel5.setText("Origen h(n) =");
-
-        OrigenG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrigenGActionPerformed(evt);
-            }
-        });
 
         jButton5.setText("Reset");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -159,45 +137,56 @@ public class Senales extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("Ingresa los elementos de la secuencia separados por ','");
+
+        jLabel14.setText("por ejemplo:  5, 3, *6, 1, 0, 5");
+
+        jLabel4.setText("y agrega un '*' antes del valor para indicar cua es el origen");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrigenG, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OrigenH, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5)
-                            .addComponent(jButton6)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jButton6)
+                                .addGap(37, 37, 37)
+                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(Hn, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Hn, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addGap(14, 14, 14)
-                                .addComponent(Gn, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(Gn, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(jLabel14)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Gn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -205,19 +194,10 @@ public class Senales extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Hn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(OrigenG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton6)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel5)
-                        .addComponent(OrigenH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton6)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Operaciones básicas.", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Carlito", 0, 12))); // NOI18N
@@ -421,72 +401,69 @@ public class Senales extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel13.setText("Operaciones básicas a una señal");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 18, Short.MAX_VALUE)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Responde, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(55, 55, 55)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(44, 44, 44)
+                                .addComponent(Responde, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(51, 51, 51)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(17, 17, 17))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(176, 176, 176))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(15, 15, 15)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(79, 79, 79)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(28, 28, 28)
                         .addComponent(Responde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(25, Short.MAX_VALUE))
+                        .addContainerGap(27, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(31, 31, 31))))
@@ -502,80 +479,103 @@ public class Senales extends javax.swing.JFrame {
         Error error = new Error();
       
         /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        float tamG[];
-        float tamH[];
+        String tamG[];
+        String tamH[];
         /*Estas dos son sobre las que se haran los calculos*/
-        float Gh[];
-        float Hh[];
+        String Gh[];
+        String Hh[];
         
         int x;
         String res="";
         
         /*Aqui estan las acomodadas*/
-        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-        float total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
-        float total1a[];
-        float total1[];// suma de los valores pero del orige pa atras
+        String Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+        String Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+        String Gh2[]; //Aqui estaran guardados los valores del origen para atras
+        String Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+        String total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
+        String total1a[];
+        String total1[];// suma de los valores pero del orige pa atras
         
-        float union[];
+        String union[];
 ////////////////////////////////////////////
         
         /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<Float> lista = new ArrayList<Float>();
-        ArrayList<Float> lista2 = new ArrayList<Float>();
+        ArrayList<String> lista = new ArrayList<String>();
+        ArrayList<String> lista2 = new ArrayList<String>();
         //////////////////////////////////////////
         
         /*Aqui guardamos las cajas de teto*/
         String gn = Gn.getText().toString();
         String hn = Hn.getText().toString();
        
+        //validamos que ambas funciones tengan definido cual es el elemento de origen y que solo sea un solo origen
+        String[] valida_origen_gn = gn.split(",");
+        int cuenta_origen_gn = 0;
+        int index_origen_gn = 0;
+        for(int i = 0; i < valida_origen_gn.length; i++){
+            if(valida_origen_gn[i].contains("*")){
+                index_origen_gn = i;
+                cuenta_origen_gn = cuenta_origen_gn + 1;
+            }
+        }
+        String[] valida_origen_hn = hn.split(",");
+        int cuenta_origen_hn = 0;
+        int index_origen_hn = 0;
+        for(int i = 0; i < valida_origen_hn.length; i++){
+            if(valida_origen_hn[i].contains("*")){
+                index_origen_hn = i;
+                cuenta_origen_hn = cuenta_origen_hn + 1;
+            }
+        }       
         
-        /*Definimos quienes serán los origenes de las funciones :D*/
-        String OriG = OrigenG.getText().toString();
-        String OriH = OrigenH.getText().toString();
+        /*Definimos quienes serán los origenes de las funciones*/
+        //String OriG = OrigenG.getText().toString();
+        //String OriH = OrigenH.getText().toString();
         
-        if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
+        //if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
+            //error.setVisible(true);
+        //}
+        if(gn.equals("")||hn.equals("")||cuenta_origen_gn != 1||cuenta_origen_hn != 1){
             error.setVisible(true);
-        }else{
+        } else{
         
-        int OrG = Integer.valueOf(OriG);
-        int OrH = Integer.valueOf(OriH);
+        //int OrG = Integer.valueOf(OriG);
+        //int OrH = Integer.valueOf(OriH);
           
        /*Estos nos sirven para definir el tamaño del arreglo*/
         int cantG = define.cant_var(gn);
-        tamG = new float[cantG];
+        tamG = new String[cantG];
         
         int cantH = define.cant_var(hn);
-        tamH = new float[cantH];
+        tamH = new String[cantH];
        
-        if((cantG<=OrG-1) || (cantH<=OrH)){
+        //if((cantG<=OrG-1) || (cantH<=OrH)){
+        if((cantG <= index_origen_gn-1) || (cantH <= index_origen_hn)){
            
         error.setVisible(true);
         } else{
                
-        /*Separamos los datos de las comas y los guardamos en una lista :D*/
+        /*Separamos los datos de las comas y los guardamos en una lista*/
         for(String numero: gn.split(","))
-            lista.add(new Float(numero));
+            lista.add(numero.trim());
         
         for(String numero: hn.split(","))
-            lista2.add(new Float(numero));
+            lista2.add(numero.trim());
         ///////////////////////////////////////////////////////////////////
         
-        /*Guardamos las listas en arreglos :D*/
+        /*Guardamos las listas en arreglos*/
         Gh =  convierte.aMatriz(lista);
-        for(int i = 0;i<Gh.length;i++){
-            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
-        }
+//        for(int i = 0;i<Gh.length;i++){
+//            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
+//        }
         Hh = convierte.aMatriz(lista2);
-        for(int i = 0;i<Hh.length;i++){
-            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
-        }
+//        for(int i = 0;i<Hh.length;i++){
+//            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
+//        }
         ////////////////////////////////////////////////////////////////////
         
-        /*Prueba de impresion si se guardan :p
+        /*Prueba de impresion si se guardan
         for(Integer i: lista){
             System.out.println(i);
         }
@@ -584,22 +584,26 @@ public class Senales extends javax.swing.JFrame {
         }*/
         
         
-        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
+        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglo
         a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-        pues las definiremos despues y se sumaran en otra seccion :D*/
-        Gh1 = define.origen(Gh, OrG);
+        pues las definiremos despues y se sumaran en otra seccion*/
+        //Gh1 = define.origen(Gh, OrG);
+        Gh1 = define.origen(Gh, index_origen_gn);
         
-        for(int i =0;i<Gh1.length;i++){
-        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
+//        for(int i =0;i<Gh1.length;i++){
+//        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
         
-        Hh1 = define.origen(Hh, OrH);
-        for(int i = 0;i<Hh1.length;i++){
-            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
+        //Hh1 = define.origen(Hh, OrH);
+        Hh1 = define.origen(Hh, index_origen_hn);
+//        for(int i = 0;i<Hh1.length;i++){
+//            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
         
-        Gh2 =define.origen_a(Gh, OrG);
-        Hh2 = define.origen_a(Hh, OrH);
+        //Gh2 =define.origen_a(Gh, OrG);
+        Gh2 =define.origen_a(Gh, index_origen_gn);
+        //Hh2 = define.origen_a(Hh, OrH);
+        Hh2 = define.origen_a(Hh, index_origen_hn);
         
         /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
         donde se sumaran y se guardaran en un arreglito :D*/
@@ -620,9 +624,9 @@ public class Senales extends javax.swing.JFrame {
           }
         
         /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
-        Responde.setText("La sumita es: \n");
+        Responde.setText("La suma es: \n");
         Resultado.setText(null);
-        union = new float[total.length+total1.length];
+        union = new String[total.length+total1.length];
         System.out.println("El arreglo de los totales tiene: "+total.length+" espacios");
         System.out.println("El arreglo de los totales tiene: "+total1.length+" espacios");
         System.out.println("El arreglo de los totales tiene: "+(total1.length + total.length)+" espacios");
@@ -633,24 +637,22 @@ public class Senales extends javax.swing.JFrame {
        
         /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
         arreglo llamado union*/
-       for(x=0; x<total1.length; x++){
-                union[x]=total1[x];
-                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
-                if(x==(total1.length-1)){
-                    for(y=total1.length;y<j;y++){
-                        union[y]=total[z];
-                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                        z++;
-                    }
-                }
-              }
+        for(x=0; x<total1.length; x++){
+            union[x]=total1[x];
+            //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+        }
+        for(y=total1.length;y<j;y++){
+            union[y]=total[z];
+            //System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
+            z++;
+        }
           //Prueba de for para imprimir la union
          for(int asd=0;asd<union.length;asd++){
              System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
          }
          Resultado.append(""+union[0]);
          for(int pepe = 1;pepe<union.length;pepe++){
-             Resultado.append(","+union[pepe]);
+             Resultado.append(", "+union[pepe]);
          }
          
         }
@@ -660,854 +662,843 @@ public class Senales extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Define define = new Define();
-        Convertidor convierte = new Convertidor();
-        Calcula calculando = new Calcula();
-        Error error = new Error();
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        float tamG[];
-        float tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        float Gh[];
-        float Hh[];
-        
-        int x;
-        String res="";
-        
-        /*Aqui estan las acomodadas*/
-        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-        float total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
-        float total1[];
-        float total1a[];
-        float union[];
-////////////////////////////////////////////
-        
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<Float> lista = new ArrayList<Float>();
-        ArrayList<Float> lista2 = new ArrayList<Float>();
-        //////////////////////////////////////////
-        
-        /*Aqui guardamos las cajas de teto*/
-        String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-       
-        
-        /*Definimos quienes serán los origenes de las funciones :D*/
-        String OriG = OrigenG.getText().toString();
-        String OriH = OrigenH.getText().toString();
-        
-           if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
-            error.setVisible(true);
-        }else{
-        
-        int OrG = Integer.valueOf(OriG);
-        int OrH = Integer.valueOf(OriH);
-        
-          
-        
-        //////////////////////////////////////////
-        
-       /*Estos nos sirven para definir el tamaño del arreglo*/
-        int cantG = define.cant_var(gn);
-        tamG = new float[cantG];
-        
-        int cantH = define.cant_var(hn);
-        tamH = new float[cantH];
-        
-        if((cantG<=OrG-1) || (cantH<=OrH)){
-           
-        error.setVisible(true);
-        } else{
-        
-      //////////////////////////////////////////////////////////////
-        
-        /*Separamos los datos de las comas y los guardamos en una lista :D*/
-        for(String numero: gn.split(","))
-            lista.add(new Float(numero));
-        
-        for(String numero: hn.split(","))
-            lista2.add(new Float(numero));
-        ///////////////////////////////////////////////////////////////////
-        
-        /*Guardamos las listas en arreglos :D*/
-        Gh =  convierte.aMatriz(lista);
-        for(int i = 0;i<Gh.length;i++){
-            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
-        }
-        Hh = convierte.aMatriz(lista2);
-        for(int i = 0;i<Hh.length;i++){
-            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
-        }
-        ////////////////////////////////////////////////////////////////////
-        
-        /*Prueba de impresion si se guardan :p
-        for(Integer i: lista){
-            System.out.println(i);
-        }
-        for(Integer j: lista2){
-            System.out.println(j);
-        }*/
-        
-        
-        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
-        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-        pues las definiremos despues y se sumaran en otra seccion :D*/
-        Gh1 = define.origen(Gh, OrG);
-        
-        for(int i =0;i<Gh1.length;i++){
-        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-        
-        Hh1 = define.origen(Hh, OrH);
-        for(int i = 0;i<Hh1.length;i++){
-            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-        
-        Gh2 =define.origen_a(Gh, OrG);
-        Hh2 = define.origen_a(Hh, OrH);
-        
-        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
-        donde se sumaran y se guardaran en un arreglito :D*/
-        total = calculando.restaPosiciones(Gh1,Hh1);
-        total1a = calculando.restaPosiciones(Gh2,Hh2);
-        /*en total 1 ya tenemos el arreglo acomodadito gracias a nuestro super mega metodo
-        acomodador :D*/
-        total1 = define.acomodador(total1a); 
-        
-        
-        for(int i = 0;i<total.length;i++){
-          System.out.println("total Ahora tenemos el valor gracias a la resta: "+total[i]+ " en la posicion "+i);
-        }
-          for(int pq = 0;pq<total1.length;pq++){
-          System.out.println("total1 Ahora tenemos el valor gracias a la resta: "+total1[pq]+ " en la posicion "+pq);
-          }
-        
-        /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
-        Responde.setText("La restita es: \n");
-        Resultado.setText(null);
-        
-        union = new float[total.length+total1.length];
-        System.out.println("El arreglo de los totales tiene: "+total.length+" espacios");
-        System.out.println("El arreglo de los totales tiene: "+total1.length+" espacios");
-        System.out.println("El arreglo de los totales tiene: "+(total1.length + total.length)+" espacios");
-        int j=total1.length+total.length;
-        int z=0;
-        int y;
-        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
-        arreglo llamado union*/
-       for(x=0; x<total1.length; x++){
-                union[x]=total1[x];
-                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
-                if(x==(total1.length-1)){
-                    for(y=total1.length;y<j;y++){
-                        union[y]=total[z];
-                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                        z++;
-                    }
-                }
-              }
-          //Prueba de for para imprimir la union
-         for(int asd=0;asd<union.length;asd++){
-             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
-         }
-         Resultado.append(""+union[0]);
-         for(int pepe = 1;pepe<union.length;pepe++){
-             Resultado.append(","+union[pepe]);
-         }
-        }
-      }
+//        Define define = new Define();
+//        Convertidor convierte = new Convertidor();
+//        Calcula calculando = new Calcula();
+//        Error error = new Error();
+//        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+//        float tamG[];
+//        float tamH[];
+//        /*Estas dos son sobre las que se haran los calculos*/
+//        float Gh[];
+//        float Hh[];
+//        
+//        int x;
+//        String res="";
+//        
+//        /*Aqui estan las acomodadas*/
+//        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
+//        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
+//        float total1[];
+//        float total1a[];
+//        float union[];
+//////////////////////////////////////////////
+//        
+//        /*Declaramos las listas donde se guardaran los datos*/
+//        ArrayList<Float> lista = new ArrayList<Float>();
+//        ArrayList<Float> lista2 = new ArrayList<Float>();
+//        //////////////////////////////////////////
+//        
+//        /*Aqui guardamos las cajas de teto*/
+//        String gn = Gn.getText().toString();
+//        String hn = Hn.getText().toString();
+//       
+//        
+//        /*Definimos quienes serán los origenes de las funciones :D*/
+//        String OriG = OrigenG.getText().toString();
+//        String OriH = OrigenH.getText().toString();
+//        
+//           if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
+//            error.setVisible(true);
+//        }else{
+//        
+//        int OrG = Integer.valueOf(OriG);
+//        int OrH = Integer.valueOf(OriH);
+//        
+//          
+//        
+//        //////////////////////////////////////////
+//        
+//       /*Estos nos sirven para definir el tamaño del arreglo*/
+//        int cantG = define.cant_var(gn);
+//        tamG = new float[cantG];
+//        
+//        int cantH = define.cant_var(hn);
+//        tamH = new float[cantH];
+//        
+//        if((cantG<=OrG-1) || (cantH<=OrH)){
+//           
+//        error.setVisible(true);
+//        } else{
+//        
+//      //////////////////////////////////////////////////////////////
+//        
+//        /*Separamos los datos de las comas y los guardamos en una lista :D*/
+//        for(String numero: gn.split(","))
+//            lista.add(new Float(numero));
+//        
+//        for(String numero: hn.split(","))
+//            lista2.add(new Float(numero));
+//        ///////////////////////////////////////////////////////////////////
+//        
+//        /*Guardamos las listas en arreglos :D*/
+//        Gh =  convierte.aMatriz(lista);
+//        for(int i = 0;i<Gh.length;i++){
+//            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
+//        }
+//        Hh = convierte.aMatriz(lista2);
+//        for(int i = 0;i<Hh.length;i++){
+//            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
+//        }
+//        ////////////////////////////////////////////////////////////////////
+//        
+//        /*Prueba de impresion si se guardan :p
+//        for(Integer i: lista){
+//            System.out.println(i);
+//        }
+//        for(Integer j: lista2){
+//            System.out.println(j);
+//        }*/
+//        
+//        
+//        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
+//        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
+//        pues las definiremos despues y se sumaran en otra seccion :D*/
+//        Gh1 = define.origen(Gh, OrG);
+//        
+//        for(int i =0;i<Gh1.length;i++){
+//        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//        
+//        Hh1 = define.origen(Hh, OrH);
+//        for(int i = 0;i<Hh1.length;i++){
+//            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//        
+//        Gh2 =define.origen_a(Gh, OrG);
+//        Hh2 = define.origen_a(Hh, OrH);
+//        
+//        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
+//        donde se sumaran y se guardaran en un arreglito :D*/
+//        total = calculando.restaPosiciones(Gh1,Hh1);
+//        total1a = calculando.restaPosiciones(Gh2,Hh2);
+//        /*en total 1 ya tenemos el arreglo acomodadito gracias a nuestro super mega metodo
+//        acomodador :D*/
+//        total1 = define.acomodador(total1a); 
+//        
+//        
+//        for(int i = 0;i<total.length;i++){
+//          System.out.println("total Ahora tenemos el valor gracias a la resta: "+total[i]+ " en la posicion "+i);
+//        }
+//          for(int pq = 0;pq<total1.length;pq++){
+//          System.out.println("total1 Ahora tenemos el valor gracias a la resta: "+total1[pq]+ " en la posicion "+pq);
+//          }
+//        
+//        /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
+//        Responde.setText("La restita es: \n");
+//        Resultado.setText(null);
+//        
+//        union = new float[total.length+total1.length];
+//        System.out.println("El arreglo de los totales tiene: "+total.length+" espacios");
+//        System.out.println("El arreglo de los totales tiene: "+total1.length+" espacios");
+//        System.out.println("El arreglo de los totales tiene: "+(total1.length + total.length)+" espacios");
+//        int j=total1.length+total.length;
+//        int z=0;
+//        int y;
+//        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
+//        arreglo llamado union*/
+//       for(x=0; x<total1.length; x++){
+//                union[x]=total1[x];
+//                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+//                if(x==(total1.length-1)){
+//                    for(y=total1.length;y<j;y++){
+//                        union[y]=total[z];
+//                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
+//                        z++;
+//                    }
+//                }
+//              }
+//          //Prueba de for para imprimir la union
+//         for(int asd=0;asd<union.length;asd++){
+//             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
+//         }
+//         Resultado.append(""+union[0]);
+//         for(int pepe = 1;pepe<union.length;pepe++){
+//             Resultado.append(","+union[pepe]);
+//         }
+//        }
+//      }
            
     
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
- Define define = new Define();
-        Convertidor convierte = new Convertidor();
-        Calcula calculando = new Calcula();
-        Error error = new Error();
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        float tamG[];
-        float tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        float Gh[];
-        float Hh[];
-        
-        int x;
-        String res="";
-        
-        /*Aqui estan las acomodadas*/
-        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-        float total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
-        float total1[];
-        float total1a[];
-        float union[];
-////////////////////////////////////////////
-        
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<Float> lista = new ArrayList<Float>();
-        ArrayList<Float> lista2 = new ArrayList<Float>();
-        //////////////////////////////////////////
-        
-        /*Aqui guardamos las cajas de teto*/
-        String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-       
-        
-        /*Definimos quienes serán los origenes de las funciones :D*/
-        String OriG = OrigenG.getText().toString();
-        String OriH = OrigenH.getText().toString();
-        
-           if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
-            error.setVisible(true);
-        }else{
-        
-        int OrG = Integer.valueOf(OriG);
-        int OrH = Integer.valueOf(OriH);
-        
-          
-        
-        //////////////////////////////////////////
-        
-       /*Estos nos sirven para definir el tamaño del arreglo*/
-        int cantG = define.cant_var(gn);
-        tamG = new float[cantG];
-        
-        int cantH = define.cant_var(hn);
-        tamH = new float[cantH];
-        
-        if((cantG<=OrG-1) || (cantH<=OrH)){
-           
-        error.setVisible(true);
-        } else{
-        
-      //////////////////////////////////////////////////////////////
-        
-        /*Separamos los datos de las comas y los guardamos en una lista :D*/
-        for(String numero: gn.split(","))
-            lista.add(new Float(numero));
-        
-        for(String numero: hn.split(","))
-            lista2.add(new Float(numero));
-        ///////////////////////////////////////////////////////////////////
-        
-        /*Guardamos las listas en arreglos :D*/
-        Gh =  convierte.aMatriz(lista);
-        for(int i = 0;i<Gh.length;i++){
-            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
-        }
-        Hh = convierte.aMatriz(lista2);
-        for(int i = 0;i<Hh.length;i++){
-            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
-        }
-        ////////////////////////////////////////////////////////////////////
-        
-        /*Prueba de impresion si se guardan :p
-        for(Integer i: lista){
-            System.out.println(i);
-        }
-        for(Integer j: lista2){
-            System.out.println(j);
-        }*/
-        
-        
-        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
-        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-        pues las definiremos despues y se sumaran en otra seccion :D*/
-        Gh1 = define.origen(Gh, OrG);
-        
-        for(int i =0;i<Gh1.length;i++){
-        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-        
-        Hh1 = define.origen(Hh, OrH);
-        for(int i = 0;i<Hh1.length;i++){
-            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-        
-        Gh2 =define.origen_a(Gh, OrG);
-        Hh2 = define.origen_a(Hh, OrH);
-        
-        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
-        donde se sumaran y se guardaran en un arreglito :D*/
-        total = calculando.multiplicaPosiciones(Gh1,Hh1);
-        total1a = calculando.multiplicaPosiciones(Gh2,Hh2);
-        /*en total 1 ya tenemos el arreglo acomodadito gracias a nuestro super mega metodo
-        acomodador :D*/
-        total1 = define.acomodador(total1a); 
-        
-        
-        for(int i = 0;i<total.length;i++){
-          System.out.println("total Ahora tenemos el valor gracias a la multiplicacion: "+total[i]+ " en la posicion "+i);
-        }
-          for(int pq = 0;pq<total1.length;pq++){
-          System.out.println("total1 Ahora tenemos el valor gracias a la multiplicacion: "+total1[pq]+ " en la posicion "+pq);
-          }
-        
-        /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
-        Responde.setText("La multiplicacion es: \n");
-        Resultado.setText(null);
-        
-        union = new float[total.length+total1.length];
-        System.out.println("El arreglo de los totales tiene: "+total.length+" espacios");
-        System.out.println("El arreglo de los totales tiene: "+total1.length+" espacios");
-        System.out.println("El arreglo de los totales tiene: "+(total1.length + total.length)+" espacios");
-        int j=total1.length+total.length;
-        int z=0;
-        int y;
-        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
-        arreglo llamado union*/
-       for(x=0; x<total1.length; x++){
-                union[x]=total1[x];
-                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
-                if(x==(total1.length-1)){
-                    for(y=total1.length;y<j;y++){
-                        union[y]=total[z];
-                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                        z++;
-                    }
-                }
-              }
-          //Prueba de for para imprimir la union
-         for(int asd=0;asd<union.length;asd++){
-             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
-         }
-         
-         Resultado.append(""+union[0]);
-         for(int pepe = 1;pepe<union.length;pepe++){
-             Resultado.append(","+union[pepe]);
-         }
-        }
-      }        
+//        Define define = new Define();
+//        Convertidor convierte = new Convertidor();
+//        Calcula calculando = new Calcula();
+//        Error error = new Error();
+//        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+//        float tamG[];
+//        float tamH[];
+//        /*Estas dos son sobre las que se haran los calculos*/
+//        float Gh[];
+//        float Hh[];
+//        
+//        int x;
+//        String res="";
+//        
+//        /*Aqui estan las acomodadas*/
+//        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
+//        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
+//        float total1[];
+//        float total1a[];
+//        float union[];
+//////////////////////////////////////////////
+//        
+//        /*Declaramos las listas donde se guardaran los datos*/
+//        ArrayList<Float> lista = new ArrayList<Float>();
+//        ArrayList<Float> lista2 = new ArrayList<Float>();
+//        //////////////////////////////////////////
+//        
+//        /*Aqui guardamos las cajas de teto*/
+//        String gn = Gn.getText().toString();
+//        String hn = Hn.getText().toString();
+//       
+//        
+//        /*Definimos quienes serán los origenes de las funciones :D*/
+//        String OriG = OrigenG.getText().toString();
+//        String OriH = OrigenH.getText().toString();
+//        
+//           if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
+//            error.setVisible(true);
+//        }else{
+//        
+//        int OrG = Integer.valueOf(OriG);
+//        int OrH = Integer.valueOf(OriH);
+//        
+//          
+//        
+//        //////////////////////////////////////////
+//        
+//       /*Estos nos sirven para definir el tamaño del arreglo*/
+//        int cantG = define.cant_var(gn);
+//        tamG = new float[cantG];
+//        
+//        int cantH = define.cant_var(hn);
+//        tamH = new float[cantH];
+//        
+//        if((cantG<=OrG-1) || (cantH<=OrH)){
+//           
+//        error.setVisible(true);
+//        } else{
+//        
+//      //////////////////////////////////////////////////////////////
+//        
+//        /*Separamos los datos de las comas y los guardamos en una lista :D*/
+//        for(String numero: gn.split(","))
+//            lista.add(new Float(numero));
+//        
+//        for(String numero: hn.split(","))
+//            lista2.add(new Float(numero));
+//        ///////////////////////////////////////////////////////////////////
+//        
+//        /*Guardamos las listas en arreglos :D*/
+//        Gh =  convierte.aMatriz(lista);
+//        for(int i = 0;i<Gh.length;i++){
+//            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
+//        }
+//        Hh = convierte.aMatriz(lista2);
+//        for(int i = 0;i<Hh.length;i++){
+//            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
+//        }
+//        ////////////////////////////////////////////////////////////////////
+//        
+//        /*Prueba de impresion si se guardan :p
+//        for(Integer i: lista){
+//            System.out.println(i);
+//        }
+//        for(Integer j: lista2){
+//            System.out.println(j);
+//        }*/
+//        
+//        
+//        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
+//        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
+//        pues las definiremos despues y se sumaran en otra seccion :D*/
+//        Gh1 = define.origen(Gh, OrG);
+//        
+//        for(int i =0;i<Gh1.length;i++){
+//        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//        
+//        Hh1 = define.origen(Hh, OrH);
+//        for(int i = 0;i<Hh1.length;i++){
+//            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//        
+//        Gh2 =define.origen_a(Gh, OrG);
+//        Hh2 = define.origen_a(Hh, OrH);
+//        
+//        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
+//        donde se sumaran y se guardaran en un arreglito :D*/
+//        total = calculando.multiplicaPosiciones(Gh1,Hh1);
+//        total1a = calculando.multiplicaPosiciones(Gh2,Hh2);
+//        /*en total 1 ya tenemos el arreglo acomodadito gracias a nuestro super mega metodo
+//        acomodador :D*/
+//        total1 = define.acomodador(total1a); 
+//        
+//        
+//        for(int i = 0;i<total.length;i++){
+//          System.out.println("total Ahora tenemos el valor gracias a la multiplicacion: "+total[i]+ " en la posicion "+i);
+//        }
+//          for(int pq = 0;pq<total1.length;pq++){
+//          System.out.println("total1 Ahora tenemos el valor gracias a la multiplicacion: "+total1[pq]+ " en la posicion "+pq);
+//          }
+//        
+//        /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
+//        Responde.setText("La multiplicacion es: \n");
+//        Resultado.setText(null);
+//        
+//        union = new float[total.length+total1.length];
+//        System.out.println("El arreglo de los totales tiene: "+total.length+" espacios");
+//        System.out.println("El arreglo de los totales tiene: "+total1.length+" espacios");
+//        System.out.println("El arreglo de los totales tiene: "+(total1.length + total.length)+" espacios");
+//        int j=total1.length+total.length;
+//        int z=0;
+//        int y;
+//        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
+//        arreglo llamado union*/
+//       for(x=0; x<total1.length; x++){
+//                union[x]=total1[x];
+//                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+//                if(x==(total1.length-1)){
+//                    for(y=total1.length;y<j;y++){
+//                        union[y]=total[z];
+//                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
+//                        z++;
+//                    }
+//                }
+//              }
+//          //Prueba de for para imprimir la union
+//         for(int asd=0;asd<union.length;asd++){
+//             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
+//         }
+//         
+//         Resultado.append(""+union[0]);
+//         for(int pepe = 1;pepe<union.length;pepe++){
+//             Resultado.append(","+union[pepe]);
+//         }
+//        }
+//      }        
            
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-Define define = new Define();
-        Convertidor convierte = new Convertidor();
-        Calcula calculando = new Calcula();
-        Error error = new Error();
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        float tamG[];
-        float tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        float Gh[];
-        float Hh[];
-        
-        int x;
-        String res="";
-        
-        /*Aqui estan las acomodadas*/
-        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-        float total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
-        float total1[];
-        float total1a[];
-        float union[];
-////////////////////////////////////////////
-        
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<Float> lista = new ArrayList<Float>();
-        ArrayList<Float> lista2 = new ArrayList<Float>();
-        //////////////////////////////////////////
-        
-        /*Aqui guardamos las cajas de teto*/
-        String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-       
-        
-        /*Definimos quienes serán los origenes de las funciones :D*/
-        String OriG = OrigenG.getText().toString();
-        String OriH = OrigenH.getText().toString();
-        
-           if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
-            error.setVisible(true);
-        }else{
-        
-        int OrG = Integer.valueOf(OriG);
-        int OrH = Integer.valueOf(OriH);
-        
-          
-        
-        //////////////////////////////////////////
-        
-       /*Estos nos sirven para definir el tamaño del arreglo*/
-        int cantG = define.cant_var(gn);
-        tamG = new float[cantG];
-        
-        int cantH = define.cant_var(hn);
-        tamH = new float[cantH];
-        
-        if((cantG<=OrG-1) || (cantH<=OrH)){
-           
-        error.setVisible(true);
-        } else{
-        
-      //////////////////////////////////////////////////////////////
-        
-        /*Separamos los datos de las comas y los guardamos en una lista :D*/
-        for(String numero: gn.split(","))
-            lista.add(new Float(numero));
-        
-        for(String numero: hn.split(","))
-            lista2.add(new Float(numero));
-        ///////////////////////////////////////////////////////////////////
-        
-        /*Guardamos las listas en arreglos :D*/
-        Gh =  convierte.aMatriz(lista);
-        for(int i = 0;i<Gh.length;i++){
-            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
-        }
-        Hh = convierte.aMatriz(lista2);
-        for(int i = 0;i<Hh.length;i++){
-            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
-        }
-        ////////////////////////////////////////////////////////////////////
-        
-        /*Prueba de impresion si se guardan :p
-        for(Integer i: lista){
-            System.out.println(i);
-        }
-        for(Integer j: lista2){
-            System.out.println(j);
-        }*/
-        
-        
-        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
-        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-        pues las definiremos despues y se sumaran en otra seccion :D*/
-        Gh1 = define.origen(Gh, OrG);
-        
-        for(int i =0;i<Gh1.length;i++){
-        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-        
-        Hh1 = define.origen(Hh, OrH);
-        for(int i = 0;i<Hh1.length;i++){
-            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-        
-        Gh2 =define.origen_a(Gh, OrG);
-        Hh2 = define.origen_a(Hh, OrH);
-        
-        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
-        donde se sumaran y se guardaran en un arreglito :D*/
-        total = calculando.dividePosiciones(Gh1,Hh1);
-        total1a = calculando.dividePosiciones(Gh2,Hh2);
-        /*en total 1 ya tenemos el arreglo acomodadito gracias a nuestro super mega metodo
-        acomodador :D*/
-        total1 = define.acomodador(total1a); 
-        
-        
-        for(int i = 0;i<total.length;i++){
-          System.out.println("total Ahora tenemos el valor gracias a la division: "+total[i]+ " en la posicion "+i);
-        }
-          for(int pq = 0;pq<total1.length;pq++){
-          System.out.println("total1 Ahora tenemos el valor gracias a la division: "+total1[pq]+ " en la posicion "+pq);
-          }
-        
-        /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
-        Responde.setText("La division es: \n");
-        Resultado.setText(null);
-        
-        union = new float[total.length+total1.length];
-        System.out.println("El arreglo de los totales tiene: "+total.length+" espacios");
-        System.out.println("El arreglo de los totales tiene: "+total1.length+" espacios");
-        System.out.println("El arreglo de los totales tiene: "+(total1.length + total.length)+" espacios");
-        int j=total1.length+total.length;
-        int z=0;
-        int y;
-        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
-        arreglo llamado union*/
-       for(x=0; x<total1.length; x++){
-                union[x]=total1[x];
-                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
-                if(x==(total1.length-1)){
-                    for(y=total1.length;y<j;y++){
-                        union[y]=total[z];
-                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                        z++;
-                    }
-                }
-              }
-          //Prueba de for para imprimir la union
-         for(int asd=0;asd<union.length;asd++){
-             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
-         }
-         
-         Resultado.append(""+union[0]);
-         for(int pepe = 1;pepe<union.length;pepe++){
-             Resultado.append(","+union[pepe]);
-         }
-        }
-      }        
-
+//        Define define = new Define();
+//        Convertidor convierte = new Convertidor();
+//        Calcula calculando = new Calcula();
+//        Error error = new Error();
+//        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+//        float tamG[];
+//        float tamH[];
+//        /*Estas dos son sobre las que se haran los calculos*/
+//        float Gh[];
+//        float Hh[];
+//        
+//        int x;
+//        String res="";
+//        
+//        /*Aqui estan las acomodadas*/
+//        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
+//        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
+//        float total1[];
+//        float total1a[];
+//        float union[];
+//////////////////////////////////////////////
+//        
+//        /*Declaramos las listas donde se guardaran los datos*/
+//        ArrayList<Float> lista = new ArrayList<Float>();
+//        ArrayList<Float> lista2 = new ArrayList<Float>();
+//        //////////////////////////////////////////
+//        
+//        /*Aqui guardamos las cajas de teto*/
+//        String gn = Gn.getText().toString();
+//        String hn = Hn.getText().toString();
+//       
+//        
+//        /*Definimos quienes serán los origenes de las funciones :D*/
+//        String OriG = OrigenG.getText().toString();
+//        String OriH = OrigenH.getText().toString();
+//        
+//           if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
+//            error.setVisible(true);
+//        }else{
+//        
+//        int OrG = Integer.valueOf(OriG);
+//        int OrH = Integer.valueOf(OriH);
+//        
+//          
+//        
+//        //////////////////////////////////////////
+//        
+//       /*Estos nos sirven para definir el tamaño del arreglo*/
+//        int cantG = define.cant_var(gn);
+//        tamG = new float[cantG];
+//        
+//        int cantH = define.cant_var(hn);
+//        tamH = new float[cantH];
+//        
+//        if((cantG<=OrG-1) || (cantH<=OrH)){
+//           
+//        error.setVisible(true);
+//        } else{
+//        
+//      //////////////////////////////////////////////////////////////
+//        
+//        /*Separamos los datos de las comas y los guardamos en una lista :D*/
+//        for(String numero: gn.split(","))
+//            lista.add(new Float(numero));
+//        
+//        for(String numero: hn.split(","))
+//            lista2.add(new Float(numero));
+//        ///////////////////////////////////////////////////////////////////
+//        
+//        /*Guardamos las listas en arreglos :D*/
+//        Gh =  convierte.aMatriz(lista);
+//        for(int i = 0;i<Gh.length;i++){
+//            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
+//        }
+//        Hh = convierte.aMatriz(lista2);
+//        for(int i = 0;i<Hh.length;i++){
+//            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
+//        }
+//        ////////////////////////////////////////////////////////////////////
+//        
+//        /*Prueba de impresion si se guardan :p
+//        for(Integer i: lista){
+//            System.out.println(i);
+//        }
+//        for(Integer j: lista2){
+//            System.out.println(j);
+//        }*/
+//        
+//        
+//        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
+//        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
+//        pues las definiremos despues y se sumaran en otra seccion :D*/
+//        Gh1 = define.origen(Gh, OrG);
+//        
+//        for(int i =0;i<Gh1.length;i++){
+//        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//        
+//        Hh1 = define.origen(Hh, OrH);
+//        for(int i = 0;i<Hh1.length;i++){
+//            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//        
+//        Gh2 =define.origen_a(Gh, OrG);
+//        Hh2 = define.origen_a(Hh, OrH);
+//        
+//        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
+//        donde se sumaran y se guardaran en un arreglito :D*/
+//        total = calculando.dividePosiciones(Gh1,Hh1);
+//        total1a = calculando.dividePosiciones(Gh2,Hh2);
+//        /*en total 1 ya tenemos el arreglo acomodadito gracias a nuestro super mega metodo
+//        acomodador :D*/
+//        total1 = define.acomodador(total1a); 
+//        
+//        
+//        for(int i = 0;i<total.length;i++){
+//          System.out.println("total Ahora tenemos el valor gracias a la division: "+total[i]+ " en la posicion "+i);
+//        }
+//          for(int pq = 0;pq<total1.length;pq++){
+//          System.out.println("total1 Ahora tenemos el valor gracias a la division: "+total1[pq]+ " en la posicion "+pq);
+//          }
+//        
+//        /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
+//        Responde.setText("La division es: \n");
+//        Resultado.setText(null);
+//        
+//        union = new float[total.length+total1.length];
+//        System.out.println("El arreglo de los totales tiene: "+total.length+" espacios");
+//        System.out.println("El arreglo de los totales tiene: "+total1.length+" espacios");
+//        System.out.println("El arreglo de los totales tiene: "+(total1.length + total.length)+" espacios");
+//        int j=total1.length+total.length;
+//        int z=0;
+//        int y;
+//        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
+//        arreglo llamado union*/
+//       for(x=0; x<total1.length; x++){
+//                union[x]=total1[x];
+//                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+//                if(x==(total1.length-1)){
+//                    for(y=total1.length;y<j;y++){
+//                        union[y]=total[z];
+//                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
+//                        z++;
+//                    }
+//                }
+//              }
+//          //Prueba de for para imprimir la union
+//         for(int asd=0;asd<union.length;asd++){
+//             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
+//         }
+//         
+//         Resultado.append(""+union[0]);
+//         for(int pepe = 1;pepe<union.length;pepe++){
+//             Resultado.append(","+union[pepe]);
+//         }
+//        }
+//      }        
+//
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        Resultado.setText("");
-        Responde.setText("");
-        Gn.setText("");
-        Hn.setText("");
-        OrigenG.setText("");
-        OrigenH.setText("");
-        nText.setText("");
-              
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        Define define = new Define();
-        Convertidor convierte = new Convertidor();
-        Calcula calculando = new Calcula();
-        Error error = new Error();
-      
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        float tamG[];
-        float tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        float Gh[];
-        float Hh[];
-        
-        int x;
-        String res="";
-        
-        /*Aqui estan las acomodadas*/
-        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-        
-        
-        
-        float union[];
-        float union2[];
-        int tamanioGad;
-        int tamanioGat;
-        int tamanioHad;
-        int tamanioHat;
-        
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<Float> lista = new ArrayList<Float>();
-        ArrayList<Float> lista2 = new ArrayList<Float>();
-        //////////////////////////////////////////
-        
-        /*Aqui guardamos las cajas de teto*/
-        String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-        
-        
-        /*Definimos quienes serán los origenes de las funciones :D*/
-        String OriG = OrigenG.getText().toString();
-        String OriH = OrigenH.getText().toString();
-        
-        /*Definimos la caja de texto donde se multiplicara por n la convolucion*/
-        String conV = nText.getText().toString();
-        
-        if(Integer.valueOf(conV)<=0|| conV.equals("")||Integer.valueOf(conV)<=0 ||gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
-            error.setVisible(true);
-        }else{
-        
-        int OrG = Integer.valueOf(OriG);
-        int OrH = Integer.valueOf(OriH);
-        int conV1 = Integer.valueOf(conV);
-       /*Estos nos sirven para definir el tamaño del arreglo*/
-        int cantG = define.cant_var(gn);
-        tamG = new float[cantG];
-        
-        int cantH = define.cant_var(hn);
-        tamH = new float[cantH];
-       
-        if((cantG<=OrG-1) || (cantH<=OrH)){
-           
-        error.setVisible(true);
-        } else{
-               
-        /*Separamos los datos de las comas y los guardamos en una lista :D*/
-        for(String numero: gn.split(","))
-            lista.add(new Float(numero));
-        
-        for(String numero2: hn.split(","))
-            lista2.add(new Float(numero2));
-        ///////////////////////////////////////////////////////////////////
-        
-        /*Guardamos las listas en arreglos :D*/
-        Gh =  convierte.aMatriz(lista);
-        Hh = convierte.aMatriz(lista2);
-        
-        /*Separamos atras y adeltane*/
-        Gh1 = define.origen(Gh, OrG);
-        Hh1 = define.origen(Hh, OrH);
-           
-        Gh2 =define.origen_a(Gh, OrG);
-        Hh2 = define.origen_a(Hh, OrH);
-        
-        tamanioGad = Gh1.length;//del origen para adelante de G
-        tamanioGat = Gh2.length;//Del origen para atras de G
-        
-        tamanioHad = Hh1.length;//Del origen para adelante de H
-        tamanioHat = Hh2.length;//Del origen pata artas de H
-       
-        float []totala;
-        float []totala1;
-        float []totala2;
-        float []totalb;
-        float []totalb1;
-        float []totalb2;
-        
-       
-        ////////////////////////////////////////////////////////////
-        totala = calculando.diezmaPosiciones_pos(Gh1,conV1,tamanioGad); //Los de adelante
-        totala1 = calculando.diezmaPosiciones_pat(Gh2, conV1, tamanioGat);
-        totala2 = define.invierte(totala1);
-        ///////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////////////
-        totalb = calculando.diezmaPosiciones_pos(Hh1,conV1, tamanioHad);
-        totalb1 = calculando.diezmaPosiciones_pat(Hh2, conV1, tamanioHat);
-        totalb2 = define.invierte(totalb1);
-         /////////////////////////////////////////////////////////////
-       /*
-        System.out.println("Primera parte");
-        for(int pa=0;pa<totala2.length;pa++){
-                        System.out.println("Tengo a "+totala2[pa]+" de union en la pos "+pa);
-                    }
-                    System.out.println("\n");
-                     for(int pe=0;pe<totala.length;pe++){
-                        System.out.println("Tengo a "+totala[pe]+" de union en la pos "+pe);
-                     }       
-          System.out.println("Segunda parte");
-          for(int pa=0;pa<totalb2.length;pa++){
-                        System.out.println("Tengo a "+totalb2[pa]+" de union en la pos "+pa);
-                    }
-                    System.out.println("\n");
-                     for(int pe=0;pe<totalb.length;pe++){
-                        System.out.println("Tengo a "+totalb[pe]+" de union en la pos "+pe);
-                     }       
-       */
-        union = define.union(totala, totala2);
-        union2 = define.union(totalb, totalb2);
-                     
-        Responde.setText("La Diezmacion es: \n");
-        Resultado.setText(null);
-        
-        Resultado.append(""+union[0]);
-       
-         for(int pepe = 1;pepe<union.length;pepe++){
-             Resultado.append(","+union[pepe]);
-         }
-         Resultado.append("\n");
-         
-         
-        Resultado.append(""+union2[0]);
-       
-         for(int pepe = 1;pepe<union2.length;pepe++){
-             Resultado.append(","+union2[pepe]);
-         }
-       
-                    
-       
-        }
-        }
+//        Define define = new Define();
+//        Convertidor convierte = new Convertidor();
+//        Calcula calculando = new Calcula();
+//        Error error = new Error();
+//      
+//        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+//        float tamG[];
+//        float tamH[];
+//        /*Estas dos son sobre las que se haran los calculos*/
+//        float Gh[];
+//        float Hh[];
+//        
+//        int x;
+//        String res="";
+//        
+//        /*Aqui estan las acomodadas*/
+//        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
+//        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+//        
+//        
+//        
+//        float union[];
+//        float union2[];
+//        int tamanioGad;
+//        int tamanioGat;
+//        int tamanioHad;
+//        int tamanioHat;
+//        
+//        /*Declaramos las listas donde se guardaran los datos*/
+//        ArrayList<Float> lista = new ArrayList<Float>();
+//        ArrayList<Float> lista2 = new ArrayList<Float>();
+//        //////////////////////////////////////////
+//        
+//        /*Aqui guardamos las cajas de teto*/
+//        String gn = Gn.getText().toString();
+//        String hn = Hn.getText().toString();
+//        
+//        
+//        /*Definimos quienes serán los origenes de las funciones :D*/
+//        String OriG = OrigenG.getText().toString();
+//        String OriH = OrigenH.getText().toString();
+//        
+//        /*Definimos la caja de texto donde se multiplicara por n la convolucion*/
+//        String conV = nText.getText().toString();
+//        
+//        if(Integer.valueOf(conV)<=0|| conV.equals("")||Integer.valueOf(conV)<=0 ||gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
+//            error.setVisible(true);
+//        }else{
+//        
+//        int OrG = Integer.valueOf(OriG);
+//        int OrH = Integer.valueOf(OriH);
+//        int conV1 = Integer.valueOf(conV);
+//       /*Estos nos sirven para definir el tamaño del arreglo*/
+//        int cantG = define.cant_var(gn);
+//        tamG = new float[cantG];
+//        
+//        int cantH = define.cant_var(hn);
+//        tamH = new float[cantH];
+//       
+//        if((cantG<=OrG-1) || (cantH<=OrH)){
+//           
+//        error.setVisible(true);
+//        } else{
+//               
+//        /*Separamos los datos de las comas y los guardamos en una lista :D*/
+//        for(String numero: gn.split(","))
+//            lista.add(new Float(numero));
+//        
+//        for(String numero2: hn.split(","))
+//            lista2.add(new Float(numero2));
+//        ///////////////////////////////////////////////////////////////////
+//        
+//        /*Guardamos las listas en arreglos :D*/
+//        Gh =  convierte.aMatriz(lista);
+//        Hh = convierte.aMatriz(lista2);
+//        
+//        /*Separamos atras y adeltane*/
+//        Gh1 = define.origen(Gh, OrG);
+//        Hh1 = define.origen(Hh, OrH);
+//           
+//        Gh2 =define.origen_a(Gh, OrG);
+//        Hh2 = define.origen_a(Hh, OrH);
+//        
+//        tamanioGad = Gh1.length;//del origen para adelante de G
+//        tamanioGat = Gh2.length;//Del origen para atras de G
+//        
+//        tamanioHad = Hh1.length;//Del origen para adelante de H
+//        tamanioHat = Hh2.length;//Del origen pata artas de H
+//       
+//        float []totala;
+//        float []totala1;
+//        float []totala2;
+//        float []totalb;
+//        float []totalb1;
+//        float []totalb2;
+//        
+//       
+//        ////////////////////////////////////////////////////////////
+//        totala = calculando.diezmaPosiciones_pos(Gh1,conV1,tamanioGad); //Los de adelante
+//        totala1 = calculando.diezmaPosiciones_pat(Gh2, conV1, tamanioGat);
+//        totala2 = define.invierte(totala1);
+//        ///////////////////////////////////////////////////////
+//        ///////////////////////////////////////////////////////////
+//        totalb = calculando.diezmaPosiciones_pos(Hh1,conV1, tamanioHad);
+//        totalb1 = calculando.diezmaPosiciones_pat(Hh2, conV1, tamanioHat);
+//        totalb2 = define.invierte(totalb1);
+//         /////////////////////////////////////////////////////////////
+//       /*
+//        System.out.println("Primera parte");
+//        for(int pa=0;pa<totala2.length;pa++){
+//                        System.out.println("Tengo a "+totala2[pa]+" de union en la pos "+pa);
+//                    }
+//                    System.out.println("\n");
+//                     for(int pe=0;pe<totala.length;pe++){
+//                        System.out.println("Tengo a "+totala[pe]+" de union en la pos "+pe);
+//                     }       
+//          System.out.println("Segunda parte");
+//          for(int pa=0;pa<totalb2.length;pa++){
+//                        System.out.println("Tengo a "+totalb2[pa]+" de union en la pos "+pa);
+//                    }
+//                    System.out.println("\n");
+//                     for(int pe=0;pe<totalb.length;pe++){
+//                        System.out.println("Tengo a "+totalb[pe]+" de union en la pos "+pe);
+//                     }       
+//       */
+//        union = define.union(totala, totala2);
+//        union2 = define.union(totalb, totalb2);
+//                     
+//        Responde.setText("La Diezmacion es: \n");
+//        Resultado.setText(null);
+//        
+//        Resultado.append(""+union[0]);
+//       
+//         for(int pepe = 1;pepe<union.length;pepe++){
+//             Resultado.append(","+union[pepe]);
+//         }
+//         Resultado.append("\n");
+//         
+//         
+//        Resultado.append(""+union2[0]);
+//       
+//         for(int pepe = 1;pepe<union2.length;pepe++){
+//             Resultado.append(","+union2[pepe]);
+//         }
+//       
+//                    
+//       
+//        }
+//        }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // Interpolacion
 
-        Define define = new Define();
-        Convertidor convierte = new Convertidor();
-        Calcula calculando = new Calcula();
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        float tamG[];
-        float tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        float Gh[];
-        float Hh[];
-
-        int x;
-        String res="";
-
-        /*Aqui estan las acomodadas*/
-        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-
-        
-        float GhI1[]; //Interpolado de G adelante
-        float GhI2[]; //Interpolado de G atras
-        float HhI1[]; //Interpolado de H adelante
-        float HhI2[]; //Interpolado de H atras
-        
-        float Gunion[]; //Interpolado de H adelante
-        float Hunion[]; //Interpolado de H atras
-        ////////////////////////////////////////////
-
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<Float> lista = new ArrayList<Float>();
-        ArrayList<Float> lista2 = new ArrayList<Float>();
-        //////////////////////////////////////////
-
-        /*Aqui guardamos las cajas de teto*/
-        String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-
-        /*Definimos quienes serán los origenes de las funciones :D*/
-        int OrG = Integer.valueOf(OrigenG.getText().toString());
-        int OrH = Integer.valueOf(OrigenH.getText().toString());
-        //////////////////////////////////////////
-
-        /*Estos nos sirven para definir el tamaño del arreglo*/
-        int cantG = define.cant_var(gn);
-        tamG = new float[cantG];
-
-        int cantH = define.cant_var(hn);
-        tamH = new float[cantH];
-
-        //////////////////////////////////////////////////////////////
-
-        /*Separamos los datos de las comas y los guardamos en una lista :D*/
-        for(String numero: gn.split(","))
-        lista.add(new Float(numero));
-
-        for(String numero: hn.split(","))
-        lista2.add(new Float(numero));
-        ///////////////////////////////////////////////////////////////////
-
-        /*Guardamos las listas en arreglos :D*/
-        Gh =  convierte.aMatriz(lista);
-        for(int i = 0;i<Gh.length;i++){
-            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
-        }
-        Hh = convierte.aMatriz(lista2);
-        for(int i = 0;i<Hh.length;i++){
-            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
-        }
-        ////////////////////////////////////////////////////////////////////
-
-        /*Prueba de impresion si se guardan :p
-        for(Integer i: lista){
-            System.out.println(i);
-        }
-        for(Integer j: lista2){
-            System.out.println(j);
-        }*/
-
-        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
-        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-        pues las definiremos despues y se sumaran en otra seccion :D*/
-        Gh1 = define.origen(Gh, OrG);
-
-        for(int i =0;i<Gh1.length;i++){
-            System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-
-        Hh1 = define.origen(Hh, OrH);
-        for(int i = 0;i<Hh1.length;i++){
-            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-
-        Gh2 =define.origen_a(Gh, OrG);
-        Hh2 = define.origen_a(Hh, OrH);
-
-        //Obtengamos el tipo de interpolacion
-        int tipo=0;
-        String inTipo = jComboBox1.getSelectedItem().toString();
-
-        if(inTipo.equals("Cero"))
-        tipo = 0;
-        if(inTipo.equals("Escalon"))
-        tipo = 1;
-        if(inTipo.equals("Lineal"))
-        tipo = 2;
-
-        //Obtengamos el valor de interpolacion
-        int valor = Integer.valueOf(valorInt.getText().toString());
-        
-        Gh2 = define.acomodador(Gh2); 
-        Hh2 = define.acomodador(Hh2); 
-
-        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
-        donde se sumaran y se guardaran en un arreglito :D*/
-        /*total es el arreglo que contiene los valores desde el origen a los positivos
-        total2 es el arreglo que contiene los valores desde el origen para atras :D*/
-        GhI1 = calculando.interpolaPosiciones(Gh1,tipo,valor,0);
-        GhI2 = calculando.interpolaPosiciones(Gh2,tipo,valor,Gh1[0]);
-        
-        HhI1 = calculando.interpolaPosiciones(Hh1,tipo,valor,0);
-        HhI2 = calculando.interpolaPosiciones(Hh2,tipo,valor,Hh1[0]);
-        
-        //total2 = calculando.interpolaPosiciones(Gh2,Hh2,tipo,valor);
-        /*for(int i = 0;i<total.length;i++){
-            System.out.println("Ahora tenemos el valor gracias a la suma: "+total[i]+ " en la posicion "+i);
-        }*/
-
-        
-        Gunion = new float[GhI1.length+GhI2.length];
-        
-        int j=GhI1.length+GhI2.length;
-        int z=0;
-        int y;
-        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
-        arreglo llamado union*/
-       for(x=0; x<GhI2.length; x++){
-                Gunion[x]=GhI2[x];
-                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
-                if(x==(GhI2.length-1)){
-                    for(y=GhI2.length;y<j;y++){
-                        Gunion[y]=GhI1[z];
-                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                        z++;
-                    }
-                }
-              }
-          //Prueba de for para imprimir la union
-         Resultado.setText("");
-         Responde.setText("La interpolación es\n");
-       
-         Resultado.append(""+Gunion[0]);
-         
-         for(int pepe = 1;pepe<Gunion.length;pepe++){
-             Resultado.append(","+Gunion[pepe]);
-         }
-         
-         Resultado.append("\n");
-         //----------------------------------------------------
-         
-         
-         
-         Hunion = new float[HhI1.length+HhI2.length];
-        
-        j=HhI1.length+HhI2.length;
-        z=0;
-        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
-        arreglo llamado union*/
-       for(x=0; x<HhI2.length; x++){
-                Hunion[x]=HhI2[x];
-                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
-                if(x==(HhI2.length-1)){
-                    for(y=HhI2.length;y<j;y++){
-                        Hunion[y]=HhI1[z];
-                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                        z++;
-                    }
-                }
-              }
-          //Prueba de for para imprimir la union
-      
-         Resultado.append(""+Hunion[0]);
-       
-         for(int pepe = 1;pepe<Hunion.length;pepe++){
-             Resultado.append(","+Hunion[pepe]);
-         }
-        
-        /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
-       
+//        Define define = new Define();
+//        Convertidor convierte = new Convertidor();
+//        Calcula calculando = new Calcula();
+//        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+//        float tamG[];
+//        float tamH[];
+//        /*Estas dos son sobre las que se haran los calculos*/
+//        float Gh[];
+//        float Hh[];
+//
+//        int x;
+//        String res="";
+//
+//        /*Aqui estan las acomodadas*/
+//        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
+//        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+//
+//        
+//        float GhI1[]; //Interpolado de G adelante
+//        float GhI2[]; //Interpolado de G atras
+//        float HhI1[]; //Interpolado de H adelante
+//        float HhI2[]; //Interpolado de H atras
+//        
+//        float Gunion[]; //Interpolado de H adelante
+//        float Hunion[]; //Interpolado de H atras
+//        ////////////////////////////////////////////
+//
+//        /*Declaramos las listas donde se guardaran los datos*/
+//        ArrayList<Float> lista = new ArrayList<Float>();
+//        ArrayList<Float> lista2 = new ArrayList<Float>();
+//        //////////////////////////////////////////
+//
+//        /*Aqui guardamos las cajas de teto*/
+//        String gn = Gn.getText().toString();
+//        String hn = Hn.getText().toString();
+//
+//        /*Definimos quienes serán los origenes de las funciones :D*/
+//        int OrG = Integer.valueOf(OrigenG.getText().toString());
+//        int OrH = Integer.valueOf(OrigenH.getText().toString());
+//        //////////////////////////////////////////
+//
+//        /*Estos nos sirven para definir el tamaño del arreglo*/
+//        int cantG = define.cant_var(gn);
+//        tamG = new float[cantG];
+//
+//        int cantH = define.cant_var(hn);
+//        tamH = new float[cantH];
+//
+//        //////////////////////////////////////////////////////////////
+//
+//        /*Separamos los datos de las comas y los guardamos en una lista :D*/
+//        for(String numero: gn.split(","))
+//        lista.add(new Float(numero));
+//
+//        for(String numero: hn.split(","))
+//        lista2.add(new Float(numero));
+//        ///////////////////////////////////////////////////////////////////
+//
+//        /*Guardamos las listas en arreglos :D*/
+//        Gh =  convierte.aMatriz(lista);
+//        for(int i = 0;i<Gh.length;i++){
+//            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
+//        }
+//        Hh = convierte.aMatriz(lista2);
+//        for(int i = 0;i<Hh.length;i++){
+//            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
+//        }
+//        ////////////////////////////////////////////////////////////////////
+//
+//        /*Prueba de impresion si se guardan :p
+//        for(Integer i: lista){
+//            System.out.println(i);
+//        }
+//        for(Integer j: lista2){
+//            System.out.println(j);
+//        }*/
+//
+//        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
+//        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
+//        pues las definiremos despues y se sumaran en otra seccion :D*/
+//        Gh1 = define.origen(Gh, OrG);
+//
+//        for(int i =0;i<Gh1.length;i++){
+//            System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//
+//        Hh1 = define.origen(Hh, OrH);
+//        for(int i = 0;i<Hh1.length;i++){
+//            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//
+//        Gh2 =define.origen_a(Gh, OrG);
+//        Hh2 = define.origen_a(Hh, OrH);
+//
+//        //Obtengamos el tipo de interpolacion
+//        int tipo=0;
+//        String inTipo = jComboBox1.getSelectedItem().toString();
+//
+//        if(inTipo.equals("Cero"))
+//        tipo = 0;
+//        if(inTipo.equals("Escalon"))
+//        tipo = 1;
+//        if(inTipo.equals("Lineal"))
+//        tipo = 2;
+//
+//        //Obtengamos el valor de interpolacion
+//        int valor = Integer.valueOf(valorInt.getText().toString());
+//        
+//        Gh2 = define.acomodador(Gh2); 
+//        Hh2 = define.acomodador(Hh2); 
+//
+//        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
+//        donde se sumaran y se guardaran en un arreglito :D*/
+//        /*total es el arreglo que contiene los valores desde el origen a los positivos
+//        total2 es el arreglo que contiene los valores desde el origen para atras :D*/
+//        GhI1 = calculando.interpolaPosiciones(Gh1,tipo,valor,0);
+//        GhI2 = calculando.interpolaPosiciones(Gh2,tipo,valor,Gh1[0]);
+//        
+//        HhI1 = calculando.interpolaPosiciones(Hh1,tipo,valor,0);
+//        HhI2 = calculando.interpolaPosiciones(Hh2,tipo,valor,Hh1[0]);
+//        
+//        //total2 = calculando.interpolaPosiciones(Gh2,Hh2,tipo,valor);
+//        /*for(int i = 0;i<total.length;i++){
+//            System.out.println("Ahora tenemos el valor gracias a la suma: "+total[i]+ " en la posicion "+i);
+//        }*/
+//
+//        
+//        Gunion = new float[GhI1.length+GhI2.length];
+//        
+//        int j=GhI1.length+GhI2.length;
+//        int z=0;
+//        int y;
+//        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
+//        arreglo llamado union*/
+//       for(x=0; x<GhI2.length; x++){
+//                Gunion[x]=GhI2[x];
+//                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+//                if(x==(GhI2.length-1)){
+//                    for(y=GhI2.length;y<j;y++){
+//                        Gunion[y]=GhI1[z];
+//                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
+//                        z++;
+//                    }
+//                }
+//              }
+//          //Prueba de for para imprimir la union
+//         Resultado.setText("");
+//         Responde.setText("La interpolación es\n");
+//       
+//         Resultado.append(""+Gunion[0]);
+//         
+//         for(int pepe = 1;pepe<Gunion.length;pepe++){
+//             Resultado.append(","+Gunion[pepe]);
+//         }
+//         
+//         Resultado.append("\n");
+//         //----------------------------------------------------
+//         
+//         
+//         
+//         Hunion = new float[HhI1.length+HhI2.length];
+//        
+//        j=HhI1.length+HhI2.length;
+//        z=0;
+//        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
+//        arreglo llamado union*/
+//       for(x=0; x<HhI2.length; x++){
+//                Hunion[x]=HhI2[x];
+//                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+//                if(x==(HhI2.length-1)){
+//                    for(y=HhI2.length;y<j;y++){
+//                        Hunion[y]=HhI1[z];
+//                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
+//                        z++;
+//                    }
+//                }
+//              }
+//          //Prueba de for para imprimir la union
+//      
+//         Resultado.append(""+Hunion[0]);
+//       
+//         for(int pepe = 1;pepe<Hunion.length;pepe++){
+//             Resultado.append(","+Hunion[pepe]);
+//         }
+//        
+//        /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
+//       
 
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -1519,505 +1510,505 @@ Define define = new Define();
         // TODO add your handling code here:
     }//GEN-LAST:event_RespondeActionPerformed
 
-    private void OrigenGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrigenGActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OrigenGActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // Grafica
-        
-        
-        Define define = new Define();
-        Convertidor convierte = new Convertidor();
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        float tamG[];
-        float tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        float Gh[];
-        float Hh[];
-
-        int x;
-        String res="";
-
-        /*Aqui estan las acomodadas*/
-        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-
-        
-        float GhI1[]; //Interpolado de G adelante
-        float GhI2[]; //Interpolado de G atras
-        float HhI1[]; //Interpolado de H adelante
-        float HhI2[]; //Interpolado de H atras
-        
-        float Gunion[]; //Interpolado de H adelante
-        float Hunion[]; //Interpolado de H atras
-        ////////////////////////////////////////////
-
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<Float> lista = new ArrayList<Float>();
-        ArrayList<Float> lista2 = new ArrayList<Float>();
-        //////////////////////////////////////////
-
-        /*Aqui guardamos las cajas de teto*/
-        String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-
-        /*Definimos quienes serán los origenes de las funciones :D*/
-        int OrG = Integer.valueOf(OrigenG.getText().toString());
-        int OrH = Integer.valueOf(OrigenH.getText().toString());
-        //////////////////////////////////////////
-
-        /*Estos nos sirven para definir el tamaño del arreglo*/
-        int cantG = define.cant_var(gn);
-        tamG = new float[cantG];
-
-        int cantH = define.cant_var(hn);
-        tamH = new float[cantH];
-
-        //////////////////////////////////////////////////////////////
-
-        /*Separamos los datos de las comas y los guardamos en una lista :D*/
-        for(String numero: gn.split(","))
-        lista.add(new Float(numero));
-
-        for(String numero: hn.split(","))
-        lista2.add(new Float(numero));
-        ///////////////////////////////////////////////////////////////////
-
-        /*Guardamos las listas en arreglos :D*/
-        Gh =  convierte.aMatriz(lista);
-        for(int i = 0;i<Gh.length;i++){
-            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
-        }
-        Hh = convierte.aMatriz(lista2);
-        for(int i = 0;i<Hh.length;i++){
-            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
-        }
-        ////////////////////////////////////////////////////////////////////
-
-        /*Prueba de impresion si se guardan :p
-        for(Integer i: lista){
-            System.out.println(i);
-        }
-        for(Integer j: lista2){
-            System.out.println(j);
-        }*/
-
-        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
-        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-        pues las definiremos despues y se sumaran en otra seccion :D*/
-        Gh1 = define.origen(Gh, OrG);
-
-        Hh1 = define.origen(Hh, OrH);
-       
-
-        Gh2 =define.origen_a(Gh, OrG);
-        Hh2 = define.origen_a(Hh, OrH);
-        
-        //Gh2 = define.acomodador(Gh2); 
-        //Hh2 = define.acomodador(Hh2); 
-
-        
-        
-        GraficaA gra = new GraficaA(Gh1,Gh2,Hh1,Hh2);
-        
-        
-    }//GEN-LAST:event_jButton6ActionPerformed
-
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-         Define define = new Define();
-        Convertidor convierte = new Convertidor();
-        Calcula calculando = new Calcula();
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        float tamG[];
-        float tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        float Gh[];
-        float Hh[];
-
-        int x;
-        int OrG2, OrH2;
-
-        /*Aqui estan las acomodadas*/
-        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-
-        
-        float GhI1[]; //Interpolado de G adelante
-        float GhI2[]; //Interpolado de G atras
-        float HhI1[]; //Interpolado de H adelante
-        float HhI2[]; //Interpolado de H atras
-        
-        float Gunion[]; //Interpolado de H adelante
-        float Hunion[]; //Interpolado de H atras
-        ////////////////////////////////////////////
-
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<Float> lista = new ArrayList<Float>();
-        ArrayList<Float> lista2 = new ArrayList<Float>();
-        //////////////////////////////////////////
-
-        /*Aqui guardamos las cajas de teto*/
-        String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-
-        /*Definimos quienes serán los origenes de las funciones :D*/
-        int OrG = Integer.valueOf(OrigenG.getText().toString());
-        int OrH = Integer.valueOf(OrigenH.getText().toString());
-        //////////////////////////////////////////
-
-        /*Estos nos sirven para definir el tamaño del arreglo*/
-        int cantG = define.cant_var(gn);
-        tamG = new float[cantG];
-
-        int cantH = define.cant_var(hn);
-        tamH = new float[cantH];
-
-        //////////////////////////////////////////////////////////////
-
-        /*Separamos los datos de las comas y los guardamos en una lista :D*/
-        for(String numero: gn.split(","))
-        lista.add(new Float(numero));
-
-        for(String numero: hn.split(","))
-        lista2.add(new Float(numero));
-        ///////////////////////////////////////////////////////////////////
-
-        /*Guardamos las listas en arreglos :D*/
-        Gh =  convierte.aMatriz(lista);
-        for(int i = 0;i<Gh.length;i++){
-            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
-        }
-        Hh = convierte.aMatriz(lista2);
-        for(int i = 0;i<Hh.length;i++){
-            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
-        }
-        ////////////////////////////////////////////////////////////////////
-
-        /*Prueba de impresion si se guardan :p
-        for(Integer i: lista){
-            System.out.println(i);
-        }
-        for(Integer j: lista2){
-            System.out.println(j);
-        }*/
-
-        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
-        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-        pues las definiremos despues y se sumaran en otra seccion :D*/
-        Gh1 = define.origen(Gh, OrG);
-
-        for(int i =0;i<Gh1.length;i++){
-            System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-
-        Hh1 = define.origen(Hh, OrH);
-        for(int i = 0;i<Hh1.length;i++){
-            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-
-        Gh2 =define.origen_a(Gh, OrG);
-        Hh2 = define.origen_a(Hh, OrH);
-
-       
-
-        //Obtengamos el valor de interpolacion
-        int valor = Integer.valueOf(valorInt2.getText().toString());
-        
-        Gh2 = define.acomodador(Gh2); 
-        Hh2 = define.acomodador(Hh2); 
-
-        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
-        donde se sumaran y se guardaran en un arreglito :D*/
-        /*total es el arreglo que contiene los valores desde el origen a los positivos
-        total2 es el arreglo que contiene los valores desde el origen para atras :D*/
-        if(valor < 0){
-            GhI2 = calculando.desplazaPosicionesNega(Gh2, (0-valor));
-            HhI2 = calculando.desplazaPosicionesNega(Hh2, (0-valor));
-            GhI1 = new float[Gh1.length];
-            for(x=0;x<Gh1.length;x++)
-                GhI1[x] = Gh1[x];
-            HhI1 = new float[Hh1.length];
-            for(x=0;x<Hh1.length;x++)
-                HhI1[x] = Hh1[x];
-                
-        }
-        else{
-            GhI1 = calculando.desplazaPosiciones(Gh1,valor);
-            HhI1 = calculando.desplazaPosiciones(Hh1,valor);
-            GhI2 = new float[Gh2.length];
-            for(x=0;x<Gh2.length;x++)
-                GhI2[x] = Gh2[x];
-            HhI2 = new float[Hh2.length];
-            for(x=0;x<Hh2.length;x++)
-                HhI2[x] = Hh2[x];
-        }
-
-
-        
-        Gunion = new float[GhI1.length+GhI2.length];
-        
-        int j=GhI1.length+GhI2.length;
-        int z=0;
-        int y;
-        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
-        arreglo llamado union*/
-       for(x=0; x<GhI2.length; x++){
-                Gunion[x]=GhI2[x];
-                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
-                if(x==(GhI2.length-1)){
-                    for(y=GhI2.length;y<j;y++){
-                        Gunion[y]=GhI1[z];
-                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                        z++;
-                    }
-                }
-              }
-          //Prueba de for para imprimir la union
-         Resultado.setText("");
-         Responde.setText("El desplazamiento es\n");
-       
-         Resultado.append(""+Gunion[0]);
-         
-         for(int pepe = 1;pepe<Gunion.length;pepe++){
-             Resultado.append(","+Gunion[pepe]);
-         }
-         
-         OrG2 = OrG + valor;
-         if(OrG2 < 0)
-             OrG2 = 0;
-         
-         Resultado.append("\nEl origen esta en "+OrG2+"\n");
-         //----------------------------------------------------
-         
-         
-         
-         Hunion = new float[HhI1.length+HhI2.length];
-        
-        j=HhI1.length+HhI2.length;
-        z=0;
-        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
-        arreglo llamado union*/
-       for(x=0; x<HhI2.length; x++){
-                Hunion[x]=HhI2[x];
-                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
-                if(x==(HhI2.length-1)){
-                    for(y=HhI2.length;y<j;y++){
-                        Hunion[y]=HhI1[z];
-                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                        z++;
-                    }
-                }
-              }
-          //Prueba de for para imprimir la union
-      
-         Resultado.append(""+Hunion[0]);
-       
-         for(int pepe = 1;pepe<Hunion.length;pepe++){
-             Resultado.append(","+Hunion[pepe]);
-         }
-        
-        OrH2 = OrH + valor;
-         if(OrH2 < 0)
-             OrH2 = 0;
-         
-         Resultado.append("\nEl origen esta en "+OrH2+"\n");
+//        // TODO add your handling code here:
+//         Define define = new Define();
+//        Convertidor convierte = new Convertidor();
+//        Calcula calculando = new Calcula();
+//        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+//        float tamG[];
+//        float tamH[];
+//        /*Estas dos son sobre las que se haran los calculos*/
+//        float Gh[];
+//        float Hh[];
+//
+//        int x;
+//        int OrG2, OrH2;
+//
+//        /*Aqui estan las acomodadas*/
+//        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
+//        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+//
+//        
+//        float GhI1[]; //Interpolado de G adelante
+//        float GhI2[]; //Interpolado de G atras
+//        float HhI1[]; //Interpolado de H adelante
+//        float HhI2[]; //Interpolado de H atras
+//        
+//        float Gunion[]; //Interpolado de H adelante
+//        float Hunion[]; //Interpolado de H atras
+//        ////////////////////////////////////////////
+//
+//        /*Declaramos las listas donde se guardaran los datos*/
+//        ArrayList<Float> lista = new ArrayList<Float>();
+//        ArrayList<Float> lista2 = new ArrayList<Float>();
+//        //////////////////////////////////////////
+//
+//        /*Aqui guardamos las cajas de teto*/
+//        String gn = Gn.getText().toString();
+//        String hn = Hn.getText().toString();
+//
+//        /*Definimos quienes serán los origenes de las funciones :D*/
+//        int OrG = Integer.valueOf(OrigenG.getText().toString());
+//        int OrH = Integer.valueOf(OrigenH.getText().toString());
+//        //////////////////////////////////////////
+//
+//        /*Estos nos sirven para definir el tamaño del arreglo*/
+//        int cantG = define.cant_var(gn);
+//        tamG = new float[cantG];
+//
+//        int cantH = define.cant_var(hn);
+//        tamH = new float[cantH];
+//
+//        //////////////////////////////////////////////////////////////
+//
+//        /*Separamos los datos de las comas y los guardamos en una lista :D*/
+//        for(String numero: gn.split(","))
+//        lista.add(new Float(numero));
+//
+//        for(String numero: hn.split(","))
+//        lista2.add(new Float(numero));
+//        ///////////////////////////////////////////////////////////////////
+//
+//        /*Guardamos las listas en arreglos :D*/
+//        Gh =  convierte.aMatriz(lista);
+//        for(int i = 0;i<Gh.length;i++){
+//            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
+//        }
+//        Hh = convierte.aMatriz(lista2);
+//        for(int i = 0;i<Hh.length;i++){
+//            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
+//        }
+//        ////////////////////////////////////////////////////////////////////
+//
+//        /*Prueba de impresion si se guardan :p
+//        for(Integer i: lista){
+//            System.out.println(i);
+//        }
+//        for(Integer j: lista2){
+//            System.out.println(j);
+//        }*/
+//
+//        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
+//        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
+//        pues las definiremos despues y se sumaran en otra seccion :D*/
+//        Gh1 = define.origen(Gh, OrG);
+//
+//        for(int i =0;i<Gh1.length;i++){
+//            System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//
+//        Hh1 = define.origen(Hh, OrH);
+//        for(int i = 0;i<Hh1.length;i++){
+//            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//
+//        Gh2 =define.origen_a(Gh, OrG);
+//        Hh2 = define.origen_a(Hh, OrH);
+//
+//       
+//
+//        //Obtengamos el valor de interpolacion
+//        int valor = Integer.valueOf(valorInt2.getText().toString());
+//        
+//        Gh2 = define.acomodador(Gh2); 
+//        Hh2 = define.acomodador(Hh2); 
+//
+//        /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
+//        donde se sumaran y se guardaran en un arreglito :D*/
+//        /*total es el arreglo que contiene los valores desde el origen a los positivos
+//        total2 es el arreglo que contiene los valores desde el origen para atras :D*/
+//        if(valor < 0){
+//            GhI2 = calculando.desplazaPosicionesNega(Gh2, (0-valor));
+//            HhI2 = calculando.desplazaPosicionesNega(Hh2, (0-valor));
+//            GhI1 = new float[Gh1.length];
+//            for(x=0;x<Gh1.length;x++)
+//                GhI1[x] = Gh1[x];
+//            HhI1 = new float[Hh1.length];
+//            for(x=0;x<Hh1.length;x++)
+//                HhI1[x] = Hh1[x];
+//                
+//        }
+//        else{
+//            GhI1 = calculando.desplazaPosiciones(Gh1,valor);
+//            HhI1 = calculando.desplazaPosiciones(Hh1,valor);
+//            GhI2 = new float[Gh2.length];
+//            for(x=0;x<Gh2.length;x++)
+//                GhI2[x] = Gh2[x];
+//            HhI2 = new float[Hh2.length];
+//            for(x=0;x<Hh2.length;x++)
+//                HhI2[x] = Hh2[x];
+//        }
+//
+//
+//        
+//        Gunion = new float[GhI1.length+GhI2.length];
+//        
+//        int j=GhI1.length+GhI2.length;
+//        int z=0;
+//        int y;
+//        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
+//        arreglo llamado union*/
+//       for(x=0; x<GhI2.length; x++){
+//                Gunion[x]=GhI2[x];
+//                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+//                if(x==(GhI2.length-1)){
+//                    for(y=GhI2.length;y<j;y++){
+//                        Gunion[y]=GhI1[z];
+//                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
+//                        z++;
+//                    }
+//                }
+//              }
+//          //Prueba de for para imprimir la union
+//         Resultado.setText("");
+//         Responde.setText("El desplazamiento es\n");
+//       
+//         Resultado.append(""+Gunion[0]);
+//         
+//         for(int pepe = 1;pepe<Gunion.length;pepe++){
+//             Resultado.append(","+Gunion[pepe]);
+//         }
+//         
+//         OrG2 = OrG + valor;
+//         if(OrG2 < 0)
+//             OrG2 = 0;
+//         
+//         Resultado.append("\nEl origen esta en "+OrG2+"\n");
+//         //----------------------------------------------------
+//         
+//         
+//         
+//         Hunion = new float[HhI1.length+HhI2.length];
+//        
+//        j=HhI1.length+HhI2.length;
+//        z=0;
+//        /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
+//        arreglo llamado union*/
+//       for(x=0; x<HhI2.length; x++){
+//                Hunion[x]=HhI2[x];
+//                //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+//                if(x==(HhI2.length-1)){
+//                    for(y=HhI2.length;y<j;y++){
+//                        Hunion[y]=HhI1[z];
+//                  //    System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
+//                        z++;
+//                    }
+//                }
+//              }
+//          //Prueba de for para imprimir la union
+//      
+//         Resultado.append(""+Hunion[0]);
+//       
+//         for(int pepe = 1;pepe<Hunion.length;pepe++){
+//             Resultado.append(","+Hunion[pepe]);
+//         }
+//        
+//        OrH2 = OrH + valor;
+//         if(OrH2 < 0)
+//             OrH2 = 0;
+//         
+//         Resultado.append("\nEl origen esta en "+OrH2+"\n");
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void ReflejaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReflejaActionPerformed
-       Define define = new Define();
-        Convertidor convierte = new Convertidor();
-        Calcula calculando = new Calcula();
-        Error error = new Error();
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        float tamG[];
-        float tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        float Gh[];
-        float Hh[];
-        
-        int x;
-        String res="";
-        
-        /*Aqui estan las acomodadas*/
-        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-        float total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
-        float total1[];
-        float total1a[];
-        float union[];
-////////////////////////////////////////////
-        
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<Float> lista = new ArrayList<Float>();
-        ArrayList<Float> lista2 = new ArrayList<Float>();
-        //////////////////////////////////////////
-        
-        /*Aqui guardamos las cajas de teto*/
-        String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-       
-        
-        /*Definimos quienes serán los origenes de las funciones :D*/
-        String OriG = OrigenG.getText().toString();
-        String OriH = OrigenH.getText().toString();
-        
-           if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
-            error.setVisible(true);
-        }else{
-        
-        int OrG = Integer.valueOf(OriG);
-        int OrH = Integer.valueOf(OriH);
-        
-          
-        
-        //////////////////////////////////////////
-        
-       /*Estos nos sirven para definir el tamaño del arreglo*/
-        int cantG = define.cant_var(gn);
-        tamG = new float[cantG];
-        
-        int cantH = define.cant_var(hn);
-        tamH = new float[cantH];
-        
-        if((cantG<=OrG-1) || (cantH<=OrH)){
-           
-        error.setVisible(true);
-        } else{
-        
-      //////////////////////////////////////////////////////////////
-        
-        /*Separamos los datos de las comas y los guardamos en una lista :D*/
-        for(String numero: gn.split(","))
-            lista.add(new Float(numero));
-        
-        for(String numero: hn.split(","))
-            lista2.add(new Float(numero));
-        ///////////////////////////////////////////////////////////////////
-        
-        /*Guardamos las listas en arreglos :D*/
-        Gh =  convierte.aMatriz(lista);
-        for(int i = 0;i<Gh.length;i++){
-            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
-        }
-        Hh = convierte.aMatriz(lista2);
-        for(int i = 0;i<Hh.length;i++){
-            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
-        }
-        ////////////////////////////////////////////////////////////////////
-        
-        /*Prueba de impresion si se guardan :p
-        for(Integer i: lista){
-            System.out.println(i);
-        }
-        for(Integer j: lista2){
-            System.out.println(j);
-        }*/
-        
-        
-        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
-        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-        pues las definiremos despues y se sumaran en otra seccion :D*/
-        Gh1 = define.origen(Gh, OrG);
-        
-        for(int i =0;i<Gh1.length;i++){
-        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-        
-        Hh1 = define.origen(Hh, OrH);
-        for(int i = 0;i<Hh1.length;i++){
-            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
-        }
-        
-        Gh2 =define.origen_a(Gh, OrG);
-        Hh2 = define.origen_a(Hh, OrH);
-        
-        total = calculando.reflejaPos(Gh);
-        total1 = calculando.reflejaPos(Hh);
-        Responde.setText("El reflejo es: \n");
-        Resultado.setText(null);
-        Resultado.append(""+total[0]);
-         for(int pepe = 1;pepe<total.length;pepe++){
-             Resultado.append(","+total[pepe]);
-         }
-         Resultado.append("\n");
-         
-         Resultado.append(""+total1[0]);
-         for(int pepe = 1;pepe<total1.length;pepe++){
-             Resultado.append(","+total1[pepe]);
-         }
-        
-        /*
-        float[]total2;
-        float[]total2a;
-       
-        total = calculando.reflejaPos(Gh1);
-        total1 = calculando.reflejaPos(Gh2);
-        
-        total2 = calculando.reflejaPos(Hh1);
-        total2a = calculando.reflejaPos(Hh2);
-        Responde.setText("El reflejo es: \n");
-        Resultado.setText(null);
-        
-        float[]union2;
-        union2 = new float[total2.length+total2a.length];
-        union = new float[total.length+total1.length];
-       
-        int j=total1.length+total.length;
-        int z=0;
-        int y;
-        
-        
-        int ja=total2.length+total2a.length;
-        int za=0;
-        int ya;
-        int xa;
-        
-        for(x=0; x<total.length; x++){
-                union[x]=total[x];
-                if(x==(total.length-1)){
-                    for(y=total.length;y<j;y++){
-                        union[y]=total1[z];
-                        z++;
-                    }
-                }
-              }
-       
-       
-       
-       for(xa=0; x<total2.length; xa++){
-                union2[xa]=total2[xa];
-                if(xa==(total2.length-1)){
-                    for(ya=total2.length;ya<ja;ya++){
-                        union2[ya]=total2a[za];
-                        za++;
-                    }
-                }
-              }
-         for(int asd=0;asd<union.length;asd++){
-             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
-         }
-         Resultado.append(""+union[0]);
-         for(int pepe = 1;pepe<union.length;pepe++){
-             Resultado.append(","+union[pepe]);
-         }
-         Resultado.append("\n");
-         
-         Resultado.append(""+union2[0]);
-         for(int pepe = 1;pepe<union2.length;pepe++){
-             Resultado.append(","+union2[pepe]);
-         }*/
-        }
-      }
+//        Define define = new Define();
+//        Convertidor convierte = new Convertidor();
+//        Calcula calculando = new Calcula();
+//        Error error = new Error();
+//        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+//        float tamG[];
+//        float tamH[];
+//        /*Estas dos son sobre las que se haran los calculos*/
+//        float Gh[];
+//        float Hh[];
+//        
+//        int x;
+//        String res="";
+//        
+//        /*Aqui estan las acomodadas*/
+//        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
+//        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
+//        float total1[];
+//        float total1a[];
+//        float union[];
+//////////////////////////////////////////////
+//        
+//        /*Declaramos las listas donde se guardaran los datos*/
+//        ArrayList<Float> lista = new ArrayList<Float>();
+//        ArrayList<Float> lista2 = new ArrayList<Float>();
+//        //////////////////////////////////////////
+//        
+//        /*Aqui guardamos las cajas de teto*/
+//        String gn = Gn.getText().toString();
+//        String hn = Hn.getText().toString();
+//       
+//        
+//        /*Definimos quienes serán los origenes de las funciones :D*/
+//        String OriG = OrigenG.getText().toString();
+//        String OriH = OrigenH.getText().toString();
+//        
+//           if(gn.equals("")||hn.equals("")||OriG.equals("")||OriH.equals("")||Integer.valueOf(OriH)<0||Integer.valueOf(OriG)<0){
+//            error.setVisible(true);
+//        }else{
+//        
+//        int OrG = Integer.valueOf(OriG);
+//        int OrH = Integer.valueOf(OriH);
+//        
+//          
+//        
+//        //////////////////////////////////////////
+//        
+//       /*Estos nos sirven para definir el tamaño del arreglo*/
+//        int cantG = define.cant_var(gn);
+//        tamG = new float[cantG];
+//        
+//        int cantH = define.cant_var(hn);
+//        tamH = new float[cantH];
+//        
+//        if((cantG<=OrG-1) || (cantH<=OrH)){
+//           
+//        error.setVisible(true);
+//        } else{
+//        
+//      //////////////////////////////////////////////////////////////
+//        
+//        /*Separamos los datos de las comas y los guardamos en una lista :D*/
+//        for(String numero: gn.split(","))
+//            lista.add(new Float(numero));
+//        
+//        for(String numero: hn.split(","))
+//            lista2.add(new Float(numero));
+//        ///////////////////////////////////////////////////////////////////
+//        
+//        /*Guardamos las listas en arreglos :D*/
+//        Gh =  convierte.aMatriz(lista);
+//        for(int i = 0;i<Gh.length;i++){
+//            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
+//        }
+//        Hh = convierte.aMatriz(lista2);
+//        for(int i = 0;i<Hh.length;i++){
+//            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
+//        }
+//        ////////////////////////////////////////////////////////////////////
+//        
+//        /*Prueba de impresion si se guardan :p
+//        for(Integer i: lista){
+//            System.out.println(i);
+//        }
+//        for(Integer j: lista2){
+//            System.out.println(j);
+//        }*/
+//        
+//        
+//        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
+//        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
+//        pues las definiremos despues y se sumaran en otra seccion :D*/
+//        Gh1 = define.origen(Gh, OrG);
+//        
+//        for(int i =0;i<Gh1.length;i++){
+//        System.out.println("Ahora se encuentra el valor "+Gh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//        
+//        Hh1 = define.origen(Hh, OrH);
+//        for(int i = 0;i<Hh1.length;i++){
+//            System.out.println("Ahora se encuentra el valor "+Hh1[i]+" en la posicion "+i+" del nuevo arreglo :D");
+//        }
+//        
+//        Gh2 =define.origen_a(Gh, OrG);
+//        Hh2 = define.origen_a(Hh, OrH);
+//        
+//        total = calculando.reflejaPos(Gh);
+//        total1 = calculando.reflejaPos(Hh);
+//        Responde.setText("El reflejo es: \n");
+//        Resultado.setText(null);
+//        Resultado.append(""+total[0]);
+//         for(int pepe = 1;pepe<total.length;pepe++){
+//             Resultado.append(","+total[pepe]);
+//         }
+//         Resultado.append("\n");
+//         
+//         Resultado.append(""+total1[0]);
+//         for(int pepe = 1;pepe<total1.length;pepe++){
+//             Resultado.append(","+total1[pepe]);
+//         }
+//        
+//        /*
+//        float[]total2;
+//        float[]total2a;
+//       
+//        total = calculando.reflejaPos(Gh1);
+//        total1 = calculando.reflejaPos(Gh2);
+//        
+//        total2 = calculando.reflejaPos(Hh1);
+//        total2a = calculando.reflejaPos(Hh2);
+//        Responde.setText("El reflejo es: \n");
+//        Resultado.setText(null);
+//        
+//        float[]union2;
+//        union2 = new float[total2.length+total2a.length];
+//        union = new float[total.length+total1.length];
+//       
+//        int j=total1.length+total.length;
+//        int z=0;
+//        int y;
+//        
+//        
+//        int ja=total2.length+total2a.length;
+//        int za=0;
+//        int ya;
+//        int xa;
+//        
+//        for(x=0; x<total.length; x++){
+//                union[x]=total[x];
+//                if(x==(total.length-1)){
+//                    for(y=total.length;y<j;y++){
+//                        union[y]=total1[z];
+//                        z++;
+//                    }
+//                }
+//              }
+//       
+//       
+//       
+//       for(xa=0; x<total2.length; xa++){
+//                union2[xa]=total2[xa];
+//                if(xa==(total2.length-1)){
+//                    for(ya=total2.length;ya<ja;ya++){
+//                        union2[ya]=total2a[za];
+//                        za++;
+//                    }
+//                }
+//              }
+//         for(int asd=0;asd<union.length;asd++){
+//             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
+//         }
+//         Resultado.append(""+union[0]);
+//         for(int pepe = 1;pepe<union.length;pepe++){
+//             Resultado.append(","+union[pepe]);
+//         }
+//         Resultado.append("\n");
+//         
+//         Resultado.append(""+union2[0]);
+//         for(int pepe = 1;pepe<union2.length;pepe++){
+//             Resultado.append(","+union2[pepe]);
+//         }*/
+//        }
+//      }
         
     }//GEN-LAST:event_ReflejaActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // Grafica
+//        Define define = new Define();
+//        Convertidor convierte = new Convertidor();
+//        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+//        float tamG[];
+//        float tamH[];
+//        /*Estas dos son sobre las que se haran los calculos*/
+//        float Gh[];
+//        float Hh[];
+//
+//        int x;
+//        String res="";
+//
+//        /*Aqui estan las acomodadas*/
+//        float Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+//        float Gh2[]; //Aqui estaran guardados los valores del origen para atras
+//        float Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+//
+//        float GhI1[]; //Interpolado de G adelante
+//        float GhI2[]; //Interpolado de G atras
+//        float HhI1[]; //Interpolado de H adelante
+//        float HhI2[]; //Interpolado de H atras
+//
+//        float Gunion[]; //Interpolado de H adelante
+//        float Hunion[]; //Interpolado de H atras
+//        ////////////////////////////////////////////
+//
+//        /*Declaramos las listas donde se guardaran los datos*/
+//        ArrayList<Float> lista = new ArrayList<Float>();
+//        ArrayList<Float> lista2 = new ArrayList<Float>();
+//        //////////////////////////////////////////
+//
+//        /*Aqui guardamos las cajas de teto*/
+//        String gn = Gn.getText().toString();
+//        String hn = Hn.getText().toString();
+//
+//        /*Definimos quienes serán los origenes de las funciones :D*/
+//        int OrG = Integer.valueOf(OrigenG.getText().toString());
+//        int OrH = Integer.valueOf(OrigenH.getText().toString());
+//        //////////////////////////////////////////
+//
+//        /*Estos nos sirven para definir el tamaño del arreglo*/
+//        int cantG = define.cant_var(gn);
+//        tamG = new float[cantG];
+//
+//        int cantH = define.cant_var(hn);
+//        tamH = new float[cantH];
+//
+//        //////////////////////////////////////////////////////////////
+//
+//        /*Separamos los datos de las comas y los guardamos en una lista :D*/
+//        for(String numero: gn.split(","))
+//        lista.add(new Float(numero));
+//
+//        for(String numero: hn.split(","))
+//        lista2.add(new Float(numero));
+//        ///////////////////////////////////////////////////////////////////
+//
+//        /*Guardamos las listas en arreglos :D*/
+//        Gh =  convierte.aMatriz(lista);
+//        for(int i = 0;i<Gh.length;i++){
+//            System.out.println("Se encuentra el valor "+Gh[i]+ "en la pos "+i);
+//        }
+//        Hh = convierte.aMatriz(lista2);
+//        for(int i = 0;i<Hh.length;i++){
+//            System.out.println("Se encuentra el valor "+Hh[i]+ "en la pos "+i);
+//        }
+//        ////////////////////////////////////////////////////////////////////
+//
+//        /*Prueba de impresion si se guardan :p
+//        for(Integer i: lista){
+//            System.out.println(i);
+//        }
+//        for(Integer j: lista2){
+//            System.out.println(j);
+//        }*/
+//
+//        /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
+//        a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
+//        pues las definiremos despues y se sumaran en otra seccion :D*/
+//        Gh1 = define.origen(Gh, OrG);
+//
+//        Hh1 = define.origen(Hh, OrH);
+//
+//        Gh2 =define.origen_a(Gh, OrG);
+//        Hh2 = define.origen_a(Hh, OrH);
+//
+//        //Gh2 = define.acomodador(Gh2);
+//        //Hh2 = define.acomodador(Hh2);
+//
+//        GraficaA gra = new GraficaA(Gh1,Gh2,Hh1,Hh2);
+
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        Resultado.setText("");
+        Responde.setText("");
+        Gn.setText("");
+        Hn.setText("");
+        OrigenG.setText("");
+        OrigenH.setText("");
+        nText.setText("");
+
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2059,8 +2050,6 @@ Define define = new Define();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Gn;
     private javax.swing.JTextField Hn;
-    private javax.swing.JTextField OrigenG;
-    private javax.swing.JTextField OrigenH;
     private javax.swing.JButton Refleja;
     private javax.swing.JTextField Responde;
     private javax.swing.JTextArea Resultado;
@@ -2078,12 +2067,11 @@ Define define = new Define();
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

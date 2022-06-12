@@ -13,41 +13,73 @@ package senales;
 public class Calcula {
    /*Este señor recibe los pedazitos de los arreglos a partir del origen
     y los sumay guarda las sumas en un nuevo arreglo llamado suma :D, a y los imprime :D*/
-    public float[] sumaPosiciones(float[]g,float[]h){
+    public String[] sumaPosiciones(String[]g,String[]h){
        int size;
        int x;
-       float []suma;
-       float []corto;
+       String []suma;
+       String []corto;
        boolean mayor = false;
        if(g.length<h.length){
            mayor = true;
            size = h.length;
-           corto = new float[size];
+           corto = new String[size];
            for(x=0; x<g.length; x++){
                corto[x] = g[x];
            }
            for(x++; x<size; x++)
-               corto[x] = 0;
+               corto[x] = "0";
        }else{
            size = g.length;
-           corto = new float[size];
+           corto = new String[size];
            for(x=0; x<h.length; x++){
                corto[x] = h[x];
            }
            for(x++; x<size; x++)
-               corto[x] = 0;
+               corto[x] = "0";
        }
-       suma = new float[size];
+       suma = new String[size];
+       boolean origen = false;
+       float aux = 0;
        for(int i = 0;i<size;i++){
-           if(mayor){
-                suma[i]=corto[i]+h[i];
+            if(mayor){
+                //le quitamos el signo del origen
+                if(corto[i].contains("*") && h[i].contains("*")){
+                    corto[i] = corto[i].replace("*", "");
+                    h[i] = h[i].replace("*", "");
+                    origen = true;
+                }
+                aux = Float.parseFloat(corto[i]) + Float.parseFloat(h[i]);
+                
+                //le devolvemos el signo
+                if(origen){
+                    suma[i] = "*" + String.valueOf(aux);
+                    origen = false;
+                } else{
+                    suma[i] = String.valueOf(aux);
+                }
+                //suma[i]=corto[i]+h[i];
                 System.out.println("Se tiene la suma de "+corto[i]+" + "+h[i]+" y nos da "+suma[i]);
-           }
-           else{
-               suma[i]=corto[i]+g[i];
+            }
+            else{
+                //le quitamos el signo del origen
+                if(corto[i].contains("*") && g[i].contains("*")){
+                    corto[i] = corto[i].replace("*", "");
+                    g[i] = g[i].replace("*", "");
+                    origen = true;
+                }
+                aux = Float.parseFloat(corto[i]) + Float.parseFloat(g[i]);
+                
+                //le devolvemos el signo
+                if(origen){
+                    suma[i] = "*" + String.valueOf(aux);
+                    origen = false;
+                } else{
+                    suma[i] = String.valueOf(aux);
+                }
+               //suma[i]=corto[i]+g[i];
                System.out.println("Se tiene la suma de "+g[i]+" + "+corto[i]+" y nos da "+suma[i]);
-           }
-       }
+            }
+        }
        return suma;
   }
        

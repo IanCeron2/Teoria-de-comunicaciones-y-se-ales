@@ -40,7 +40,7 @@ public class Error extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Hubo un error, verifica lo introdujiste.");
+        jLabel1.setText("Hubo un error, verifica lo que introdujiste.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
