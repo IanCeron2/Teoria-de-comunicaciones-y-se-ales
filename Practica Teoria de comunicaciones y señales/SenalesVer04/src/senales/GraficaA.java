@@ -22,7 +22,7 @@ public class GraficaA extends JFrame{
     DecimalFormat df;
     float G1[],G2[],H1[],H2[];
     
-    public GraficaA(float g1[], float g2[], float h1[], float h2[]){              
+    public GraficaA(String g1[], String g2[], String h1[], String h2[]){              
 		super("Grafica de operaciones");
 		
                 g = new JLabel("Grafica de G");
@@ -35,14 +35,23 @@ public class GraficaA extends JFrame{
                 H1 = new float[h1.length];
                 H2 = new float[h2.length];
                 
-                for(x=0;x<g1.length;x++)
-                    G1[x]=g1[x];
+                for(x=0;x<g1.length;x++){
+                    if(g1[x].contains("*"))
+                        g1[x] = g1[x].replace("*", "");
+                    G1[x] = Float.parseFloat(g1[x]);
+                }
+                    
                 for(x=0;x<g2.length;x++)
-                    G2[x]=g2[x];
-                for(x=0;x<h1.length;x++)
-                    H1[x]=h1[x];
+                    G2[x] = Float.parseFloat(g2[x]);
+                
+                for(x=0;x<h1.length;x++){
+                    if(h1[x].contains("*"))
+                        h1[x] = h1[x].replace("*", "");
+                    H1[x] = Float.parseFloat(h1[x]);
+                }
+                    
                 for(x=0;x<h2.length;x++)
-                    H2[x]=h2[x];
+                    H2[x] = Float.parseFloat(h2[x]);
                 
                 //this.getContentPane().setLayout (new GridLayout(2,2));
                 intro.setLayout(new GridLayout(1,2));
@@ -176,6 +185,7 @@ public class GraficaA extends JFrame{
                 //------------------------------------
 		
 		setSize(1050, 570);
+                setLocationRelativeTo(null);
 		setVisible(true);  
 		/* addWindowListener(new WindowAdapter() {
 				public void windowClosing(WindowEvent winEvent) {

@@ -17,6 +17,7 @@ public class Error extends javax.swing.JFrame {
      */
     public Error() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

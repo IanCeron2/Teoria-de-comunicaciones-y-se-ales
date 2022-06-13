@@ -19,6 +19,7 @@ public class GraficaF extends javax.swing.JFrame {
      */
     public GraficaF() {
         initComponents();
+        setLocationRelativeTo(null);
         jPanel1.repaint();
         jPanel2.repaint();
     }

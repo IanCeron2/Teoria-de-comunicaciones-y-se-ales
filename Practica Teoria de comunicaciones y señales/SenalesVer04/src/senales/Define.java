@@ -20,8 +20,8 @@ public class Define {
             token.nextToken();//ir al siguiente token 
             cant++; 
         }
-       System.out.println("Son "+cant+" nùmeros");
-    return cant;
+        //System.out.println("Son "+cant+" nùmeros");
+        return cant;
     }
     
     public String[] origen (String[]pnl,int oG){
@@ -78,11 +78,11 @@ public class Define {
         }
     }
     
-    public float[] invierte(float[]total){
-        float[]acom;
+    public String[] invierte(String[]total){
+        String[]acom;
         int temp = total.length;
         int tempa = temp-1;
-        acom = new float[temp];
+        acom = new String[temp];
         for(int x=0;x<temp;x++){
             acom[x]= total[tempa];
             tempa--;
@@ -91,17 +91,17 @@ public class Define {
     }
     
     
-    public float [] union(float[]Ad,float[]At){
-    float []union = new float[(Ad.length + At.length)];
-    int x,y,z=0;
-    
-    for(x=0;x<At.length;x++){
-        union[x]=At[x];
-    }
-    for(y=At.length;y<Ad.length+At.length;y++){
-        union[y]=Ad[z];
-        z++;
-    }
-    return union;
+    public String [] union(String[]Ad,String[]At){
+        String []union = new String[(Ad.length + At.length)];
+        int x,y,z=0;
+
+        for(x=0;x<At.length;x++){
+            union[x]=At[x];
+        }
+        for(y=At.length;y<Ad.length+At.length;y++){
+            union[y]=Ad[z];
+            z++;
+        }
+        return union;
     }
 }
