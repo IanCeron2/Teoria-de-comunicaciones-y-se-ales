@@ -461,39 +461,59 @@ public class Calcula {
     
     public String[] desplazaPosiciones(String[]g, int valor){
         int x = 0;
+        int contador = 0;
         String []desplazado;
         
-        if(valor >= g.length){
-            desplazado = new String[valor+1];
+        if(valor > g.length){
+            desplazado = new String[valor];
             for(x=0;x<g.length;x++)
                 desplazado[x] = g[x];
-            for(x=g.length;x<valor;x++)
-                desplazado[x] = "0";
+            for(x=g.length;x<valor;x++){                
+                if(x == valor-1)
+                    desplazado[x] = "*0";
+                else
+                    desplazado[x] = "0";
+            }                
         }
         else{
             desplazado = new String[g.length];
-            for(x=0;x<g.length;x++)
-                desplazado[x] = g[x]; 
+            for(x=0;x<g.length;x++){
+                contador = contador + 1;
+                if(contador == valor)
+                    desplazado[x] = "*" + g[x];
+                else
+                    desplazado[x] = g[x];
+            }    
         }       
         return desplazado;
     }
     
-    public String[] desplazaPosicionesNega(String[]g, int valor){
+    public String[] desplazaPosicionesNega(String[]g, int valor){ //valor = 3
         int x = 0;
+        int contador = 0;
         String []desplazado;
         
-        if(valor >= g.length-1){
-            desplazado = new String[valor];
+        if(valor > g.length-1){
+            desplazado = new String[valor+1];
             for(x=0;x<g.length;x++)
                 desplazado[x] = g[x];
-            for(x=g.length;x<valor;x++)
-                desplazado[x] = "0";
+            for(x=g.length;x<valor+1;x++){                
+                if(x == valor)
+                    desplazado[x] = "*0";
+                else
+                    desplazado[x] = "0";
+            }                
         }
         else{
             desplazado = new String[g.length];
-            for(x=0;x<g.length;x++)
-                desplazado[x] = g[x]; 
-        }
+            for(x=0;x<g.length;x++){
+                contador = contador + 1;
+                if(contador == valor + 1)
+                    desplazado[x] = "*" + g[x];
+                else
+                    desplazado[x] = g[x];
+            }    
+        }       
         return desplazado;
     }
     
