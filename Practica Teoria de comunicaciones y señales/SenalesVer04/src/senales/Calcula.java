@@ -517,9 +517,32 @@ public class Calcula {
         return desplazado;
     }
     
-    
-    
-    
+    public String[] convolucion(String[] gn, String[] hn){
+        int tam_gn = gn.length;
+        int tam_hn = hn.length;
+        String[] convolucion = new String[tam_gn + tam_hn -1];
+        int k = 0, f = 0;
+        float aux = 0;
+        
+        for(int i = 0; i < convolucion.length; i++){
+            k = i;
+            f = 1;
+            aux = 0;
+            while(k >= 0){
+                if(i >= tam_gn){
+                    k = tam_gn - f;
+                    f = f + 1;
+                }
+                aux += Float.parseFloat(gn[k]) * Float.parseFloat(hn[i - k]);
+                k = k - 1;
+                
+                if((i - k) >= tam_hn)
+                    break;
+            }
+            convolucion[i] = String.format("%.02f", aux);            
+        }
+        return convolucion;
+    }   
 ////////////////////////////////////////////////////////////FIN    
  }
 
