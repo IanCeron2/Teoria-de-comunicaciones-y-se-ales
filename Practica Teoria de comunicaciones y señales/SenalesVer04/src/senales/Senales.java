@@ -56,6 +56,8 @@ public class Senales extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         valorInt2 = new javax.swing.JTextField();
         Refleja1 = new javax.swing.JButton();
+        valorInt3 = new javax.swing.JTextField();
+        valorInt4 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         nText = new javax.swing.JTextField();
@@ -257,6 +259,18 @@ public class Senales extends javax.swing.JFrame {
             }
         });
 
+        valorInt3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valorInt3ActionPerformed(evt);
+            }
+        });
+
+        valorInt4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valorInt4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -267,17 +281,18 @@ public class Senales extends javax.swing.JFrame {
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Refleja, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButton10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(valorInt2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(0, 17, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(valorInt2, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                    .addComponent(valorInt4, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                    .addComponent(valorInt3))
+                .addGap(0, 20, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(42, 42, 42)
                 .addComponent(Refleja1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -286,19 +301,22 @@ public class Senales extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
+                    .addComponent(valorInt3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Refleja)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton4)
+                        .addComponent(valorInt4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valorInt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton10)
-                    .addComponent(valorInt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Refleja))
                 .addGap(18, 18, 18)
                 .addComponent(Refleja1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(5, 5, 5))
         );
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Diezmación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Carlito", 0, 12))); // NOI18N
@@ -322,7 +340,7 @@ public class Senales extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addGap(4, 4, 4)
                 .addComponent(nText, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(jButton7)
                 .addContainerGap())
         );
@@ -368,7 +386,7 @@ public class Senales extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(valorInt, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addComponent(valorInt, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                 .addGap(10, 10, 10))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -395,7 +413,7 @@ public class Senales extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(16, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(25, 25, 25))
                     .addGroup(layout.createSequentialGroup()
@@ -406,9 +424,8 @@ public class Senales extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26))
         );
         layout.setVerticalGroup(
@@ -430,7 +447,7 @@ public class Senales extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
@@ -732,143 +749,128 @@ public class Senales extends javax.swing.JFrame {
         Convertidor convierte = new Convertidor();
         Calcula calculando = new Calcula();
         Error error = new Error();
-      
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        String tamG[];
-        String tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        String Gh[];
-        String Hh[];
-        
-        int x;
-        String res="";
-        
-        /*Aqui estan las acomodadas*/
-        String Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        String Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        String Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        String Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-        String total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
-        String total1a[];
-        String total1[];// suma de los valores pero del orige pa atras
-        String union[];
-        
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<String> lista = new ArrayList<String>();
-        ArrayList<String> lista2 = new ArrayList<String>();
-        //////////////////////////////////////////
-        
+        boolean bandera = false;
+ 
         /*Aqui guardamos las cajas de teto*/
         String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-       
-        //validamos que ambas funciones tengan definido cual es el elemento de origen y que solo sea un solo origen
-        String[] valida_origen_gn = gn.split(",");
-        int cuenta_origen_gn = 0;
-        int index_origen_gn = 0;
-        for(int i = 0; i < valida_origen_gn.length; i++){
-            if(valida_origen_gn[i].contains("*")){
-                index_origen_gn = i;
-                cuenta_origen_gn = cuenta_origen_gn + 1;
+        if(!gn.equals("")){
+            /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+            String tamG[];
+            /*Estas dos son sobre las que se haran los calculos*/
+            String Gh[];
+            /*Declaramos las listas donde se guardaran los datos*/
+            ArrayList<String> lista = new ArrayList<String>();
+            
+            //validamos que ambas funciones tengan definido cual es el elemento de origen y que solo sea un solo origen
+            String[] valida_origen_gn = gn.split(",");
+            int cuenta_origen_gn = 0;
+            int index_origen_gn = 0;
+            for(int i = 0; i < valida_origen_gn.length; i++){
+                if(valida_origen_gn[i].contains("*")){
+                    index_origen_gn = i;
+                    cuenta_origen_gn = cuenta_origen_gn + 1;
+                }
             }
-        }
-        String[] valida_origen_hn = hn.split(",");
-        int cuenta_origen_hn = 0;
-        int index_origen_hn = 0;
-        for(int i = 0; i < valida_origen_hn.length; i++){
-            if(valida_origen_hn[i].contains("*")){
-                index_origen_hn = i;
-                cuenta_origen_hn = cuenta_origen_hn + 1;
-            }
-        }    
-        
-        if(gn.equals("")||hn.equals("")||cuenta_origen_gn != 1||cuenta_origen_hn != 1){
-            error.setVisible(true);
-        } else{                
-            /*Estos nos sirven para definir el tamaño del arreglo*/
-            int cantG = define.cant_var(gn);
-            tamG = new String[cantG];
-
-            int cantH = define.cant_var(hn);
-            tamH = new String[cantH];
-
-            if((cantG <= index_origen_gn-1) || (cantH <= index_origen_hn)){
+            
+            /*Definimos la caja de texto donde se multiplicara por n la convolucion*/
+            String valor = valorInt3.getText().toString();
+            if(valor.equals(""))
+                valor = "0";
+            
+            if(Integer.parseInt(valor) <= 0||valor.equals("")||cuenta_origen_gn != 1){
                 error.setVisible(true);
-            } else{
+            } else{           
+                int valor_int = Integer.valueOf(valor);
+                /*Estos nos sirven para definir el tamaño del arreglo*/
+                int cantG = define.cant_var(gn);
+                tamG = new String[cantG];                
 
-                /*Separamos los datos de las comas y los guardamos en una lista*/
-                for(String numero: gn.split(","))
-                    lista.add(numero.trim());
+                if((cantG <= index_origen_gn-1)){
+                    error.setVisible(true);
+                } else{
+                    /*Separamos los datos de las comas y los guardamos en una lista*/
+                    for(String numero: gn.split(","))
+                        lista.add(numero.trim());
+                    ///////////////////////////////////////////////////////////////////
 
-                for(String numero: hn.split(","))
-                    lista2.add(numero.trim());
-                ///////////////////////////////////////////////////////////////////
+                    /*Guardamos las listas en arreglos :D*/
+                    Gh =  convierte.aMatriz(lista);
 
-                /*Guardamos las listas en arreglos*/
-                Gh =  convierte.aMatriz(lista);
-                Hh = convierte.aMatriz(lista2);
-                ////////////////////////////////////////////////////////////////////     
+                    Gh = calculando.multiplicaPosiciones(Gh, valor_int);
 
-                /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglo
-                a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-                pues las definiremos despues y se sumaran en otra seccion*/
+                    Responde.setText("La amplificación es: \n");
+                    Resultado.setText(null);
 
-                Gh1 = define.origen(Gh, index_origen_gn);
-                Hh1 = define.origen(Hh, index_origen_hn);
-
-                Gh2 =define.origen_a(Gh, index_origen_gn);        
-                Hh2 = define.origen_a(Hh, index_origen_hn);
-
-                /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
-                donde se sumaran y se guardaran en un arreglito :D*/
-                /*total es el arreglo que contiene los valores desde el origen a los positivos
-                  total2 es el arreglo que contiene los valores desde el origen para atras pero los tiene invertidos
-                :(*/
-                total = calculando.multiplicaPosiciones(Gh1,Hh1);
-                total1a = calculando.multiplicaPosiciones(Gh2,Hh2);
-                /*en total 1 ya tenemos el arreglo acomodadito gracias a nuestro super mega metodo
-                acomodador :D*/
-                total1 = define.acomodador(total1a); 
-
-        //        for(int i = 0;i<total.length;i++){
-        //          System.out.println("total Ahora tenemos el valor gracias a la suma: "+total[i]+ " en la posicion "+i);
-        //        }
-        //          for(int pq = 0;pq<total1.length;pq++){
-        //          System.out.println("total1 Ahora tenemos el valor gracias a la suma: "+total1[pq]+ " en la posicion "+pq);
-        //          }
-
-                /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
-                Responde.setText("La amplificación es: \n");
-                Resultado.setText(null);
-                union = new String[total.length+total1.length];
-                //System.out.println("El arreglo de los totales tiene: "+total.length+" espacios");
-                //System.out.println("El arreglo de los totales tiene: "+total1.length+" espacios");
-                //System.out.println("El arreglo de los totales tiene: "+(total1.length + total.length)+" espacios");
-                int j=total1.length+total.length;
-                int z=0;
-                int y;
-
-                /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
-                arreglo llamado union*/
-                for(x=0; x<total1.length; x++){
-                    union[x]=total1[x];
-                    //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+                    Resultado.append(""+Gh[0]);
+                    for(int pepe = 1;pepe<Gh.length;pepe++){
+                       Resultado.append(", "+Gh[pepe]);
+                    }
+                    Resultado.append("\n\n");
+                    bandera = true;
                 }
-                for(y=total1.length;y<j;y++){
-                    union[y]=total[z];
-                    //System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                    z++;
-                }
-               //Prueba de for para imprimir la union
-     //         for(int asd=0;asd<union.length;asd++){
-     //             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
-     //         }
-                Resultado.append(""+union[0]);
-                for(int pepe = 1;pepe<union.length;pepe++){
-                    Resultado.append(", "+union[pepe]);
-                }         
             }
-        }          
+            
+        }
+      
+        String hn = Hn.getText().toString(); 
+        if(!hn.equals("")){
+            String tamH[];        
+            String Hh[];
+            ArrayList<String> lista2 = new ArrayList<String>();
+            //////////////////////////////////////////
+            
+            String[] valida_origen_hn = hn.split(",");
+            int cuenta_origen_hn = 0;
+            int index_origen_hn = 0;
+            for(int i = 0; i < valida_origen_hn.length; i++){
+                if(valida_origen_hn[i].contains("*")){
+                    index_origen_hn = i;
+                    cuenta_origen_hn = cuenta_origen_hn + 1;
+                }
+            }
+            /*Definimos la caja de texto donde se multiplicara por n la convolucion*/
+            String valor = valorInt3.getText().toString();
+            if(valor.equals(""))
+                valor = "0";
+            
+            if(Integer.parseInt(valor) <= 0|| valor.equals("")||cuenta_origen_hn != 1){
+                error.setVisible(true);
+            } else{           
+
+                int valor_int = Integer.valueOf(valor);
+                /*Estos nos sirven para definir el tamaño del arreglo*/
+
+                int cantH = define.cant_var(hn);
+                tamH = new String[cantH];
+
+                if((cantH <= index_origen_hn)){
+                    error.setVisible(true);
+                } else{
+                    /*Separamos los datos de las comas y los guardamos en una lista*/
+
+                    for(String numero: hn.split(","))
+                        lista2.add(numero.trim());
+                    ///////////////////////////////////////////////////////////////////
+
+                    /*Guardamos las listas en arreglos :D*/
+                    Hh = convierte.aMatriz(lista2);
+
+                    Hh = calculando.multiplicaPosiciones(Hh, valor_int);
+                    
+                    if(!bandera){
+                        Responde.setText("La amplificación es: \n");
+                        Resultado.setText(null);
+                    }
+                    Resultado.append(""+Hh[0]);
+                    for(int pepe = 1;pepe<Hh.length;pepe++){
+                        Resultado.append(", "+Hh[pepe]);
+                    }
+                }
+            }            
+        }
+        if(gn.equals("") && hn.equals("")){
+            error.setVisible(true);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -876,142 +878,127 @@ public class Senales extends javax.swing.JFrame {
         Convertidor convierte = new Convertidor();
         Calcula calculando = new Calcula();
         Error error = new Error();
-      
-        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
-        String tamG[];
-        String tamH[];
-        /*Estas dos son sobre las que se haran los calculos*/
-        String Gh[];
-        String Hh[];
-        
-        int x;
-        String res="";
-        
-        /*Aqui estan las acomodadas*/
-        String Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        String Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
-        String Gh2[]; //Aqui estaran guardados los valores del origen para atras
-        String Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
-        String total[]; /*Aqui esta la suma de los valores pero del origen para adelante de la suma de Gh y Hh*/
-        String total1a[];
-        String total1[];// suma de los valores pero del orige pa atras
-        String union[];
-        
-        /*Declaramos las listas donde se guardaran los datos*/
-        ArrayList<String> lista = new ArrayList<String>();
-        ArrayList<String> lista2 = new ArrayList<String>();
-        //////////////////////////////////////////
-        
+        boolean bandera = false;
+ 
         /*Aqui guardamos las cajas de teto*/
         String gn = Gn.getText().toString();
-        String hn = Hn.getText().toString();
-       
-        //validamos que ambas funciones tengan definido cual es el elemento de origen y que solo sea un solo origen
-        String[] valida_origen_gn = gn.split(",");
-        int cuenta_origen_gn = 0;
-        int index_origen_gn = 0;
-        for(int i = 0; i < valida_origen_gn.length; i++){
-            if(valida_origen_gn[i].contains("*")){
-                index_origen_gn = i;
-                cuenta_origen_gn = cuenta_origen_gn + 1;
+        if(!gn.equals("")){
+            /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+            String tamG[];
+            /*Estas dos son sobre las que se haran los calculos*/
+            String Gh[];
+            /*Declaramos las listas donde se guardaran los datos*/
+            ArrayList<String> lista = new ArrayList<String>();
+            
+            //validamos que ambas funciones tengan definido cual es el elemento de origen y que solo sea un solo origen
+            String[] valida_origen_gn = gn.split(",");
+            int cuenta_origen_gn = 0;
+            int index_origen_gn = 0;
+            for(int i = 0; i < valida_origen_gn.length; i++){
+                if(valida_origen_gn[i].contains("*")){
+                    index_origen_gn = i;
+                    cuenta_origen_gn = cuenta_origen_gn + 1;
+                }
             }
-        }
-        String[] valida_origen_hn = hn.split(",");
-        int cuenta_origen_hn = 0;
-        int index_origen_hn = 0;
-        for(int i = 0; i < valida_origen_hn.length; i++){
-            if(valida_origen_hn[i].contains("*")){
-                index_origen_hn = i;
-                cuenta_origen_hn = cuenta_origen_hn + 1;
-            }
-        }    
-        
-        if(gn.equals("")||hn.equals("")||cuenta_origen_gn != 1||cuenta_origen_hn != 1){
-            error.setVisible(true);
-        } else{                
-            /*Estos nos sirven para definir el tamaño del arreglo*/
-            int cantG = define.cant_var(gn);
-            tamG = new String[cantG];
-
-            int cantH = define.cant_var(hn);
-            tamH = new String[cantH];
-
-            if((cantG <= index_origen_gn-1) || (cantH <= index_origen_hn)){
+            
+            /*Definimos la caja de texto donde se multiplicara por n la convolucion*/
+            String valor = valorInt4.getText().toString();
+            if(valor.equals(""))
+                valor = "0";
+            
+            if(Integer.parseInt(valor) <= 0||valor.equals("")||cuenta_origen_gn != 1){
                 error.setVisible(true);
-            } else{
+            } else{           
+                int valor_int = Integer.valueOf(valor);
+                /*Estos nos sirven para definir el tamaño del arreglo*/
+                int cantG = define.cant_var(gn);
+                tamG = new String[cantG];                
 
-                /*Separamos los datos de las comas y los guardamos en una lista*/
-                for(String numero: gn.split(","))
-                    lista.add(numero.trim());
+                if((cantG <= index_origen_gn-1)){
+                    error.setVisible(true);
+                } else{
+                    /*Separamos los datos de las comas y los guardamos en una lista*/
+                    for(String numero: gn.split(","))
+                        lista.add(numero.trim());
+                    ///////////////////////////////////////////////////////////////////
 
-                for(String numero: hn.split(","))
-                    lista2.add(numero.trim());
-                ///////////////////////////////////////////////////////////////////
+                    /*Guardamos las listas en arreglos :D*/
+                    Gh =  convierte.aMatriz(lista);
 
-                /*Guardamos las listas en arreglos*/
-                Gh =  convierte.aMatriz(lista);
-                Hh = convierte.aMatriz(lista2);
-                ////////////////////////////////////////////////////////////////////     
+                    Gh = calculando.dividePosiciones(Gh, valor_int);
 
-                /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglo
-                a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
-                pues las definiremos despues y se sumaran en otra seccion*/
+                    Responde.setText("La atenuación es: \n");
+                    Resultado.setText(null);
 
-                Gh1 = define.origen(Gh, index_origen_gn);
-                Hh1 = define.origen(Hh, index_origen_hn);
-
-                Gh2 =define.origen_a(Gh, index_origen_gn);        
-                Hh2 = define.origen_a(Hh, index_origen_hn);
-
-                /*Los dos cachos desde el origen para adelante los enviaremos a un nuevo metodo
-                donde se sumaran y se guardaran en un arreglito :D*/
-                /*total es el arreglo que contiene los valores desde el origen a los positivos
-                  total2 es el arreglo que contiene los valores desde el origen para atras pero los tiene invertidos
-                :(*/
-                total = calculando.dividePosiciones(Gh1,Hh1);
-                total1a = calculando.dividePosiciones(Gh2,Hh2);
-                /*en total 1 ya tenemos el arreglo acomodadito gracias a nuestro super mega metodo
-                acomodador :D*/
-                total1 = define.acomodador(total1a); 
-
-        //        for(int i = 0;i<total.length;i++){
-        //          System.out.println("total Ahora tenemos el valor gracias a la suma: "+total[i]+ " en la posicion "+i);
-        //        }
-        //          for(int pq = 0;pq<total1.length;pq++){
-        //          System.out.println("total1 Ahora tenemos el valor gracias a la suma: "+total1[pq]+ " en la posicion "+pq);
-        //          }
-
-                /*y ahora imprimimos en nuestra cajita las sumitas (NOTA MORTAL: Faltan calcular los negativos e immprimirlos) :D*/
-                Responde.setText("La atenuación es: \n");
-                Resultado.setText(null);
-                union = new String[total.length+total1.length];
-                //System.out.println("El arreglo de los totales tiene: "+total.length+" espacios");
-                //System.out.println("El arreglo de los totales tiene: "+total1.length+" espacios");
-                //System.out.println("El arreglo de los totales tiene: "+(total1.length + total.length)+" espacios");
-                int j=total1.length+total.length;
-                int z=0;
-                int y;
-
-                /*En este for agregamos los valores del origen pa adelante y del origen pa atras en un nuevo
-                arreglo llamado union*/
-                for(x=0; x<total1.length; x++){
-                    union[x]=total1[x];
-                    //System.out.println("Se ha agregado el valor "+total1[x]+" en la posicion "+x);
+                    Resultado.append(""+Gh[0]);
+                    for(int pepe = 1;pepe<Gh.length;pepe++){
+                       Resultado.append(", "+Gh[pepe]);
+                    }
+                    Resultado.append("\n\n");
+                    bandera = true;
                 }
-                for(y=total1.length;y<j;y++){
-                    union[y]=total[z];
-                    //System.out.println("Se ha agregado el valor "+total[z]+" en la posicion "+y);
-                    z++;
-                }
-               //Prueba de for para imprimir la union
-     //         for(int asd=0;asd<union.length;asd++){
-     //             System.out.println("Se tiene el valor "+union[asd] +" en la pos "+asd);
-     //         }
-                Resultado.append(""+union[0]);
-                for(int pepe = 1;pepe<union.length;pepe++){
-                    Resultado.append(", "+union[pepe]);
-                }         
             }
+            
+        }
+      
+        String hn = Hn.getText().toString(); 
+        if(!hn.equals("")){
+            String tamH[];        
+            String Hh[];
+            ArrayList<String> lista2 = new ArrayList<String>();
+            //////////////////////////////////////////
+            
+            String[] valida_origen_hn = hn.split(",");
+            int cuenta_origen_hn = 0;
+            int index_origen_hn = 0;
+            for(int i = 0; i < valida_origen_hn.length; i++){
+                if(valida_origen_hn[i].contains("*")){
+                    index_origen_hn = i;
+                    cuenta_origen_hn = cuenta_origen_hn + 1;
+                }
+            }
+            /*Definimos la caja de texto donde se multiplicara por n la convolucion*/
+            String valor = valorInt4.getText().toString();
+            if(valor.equals(""))
+                valor = "0";
+            
+            if(Integer.parseInt(valor) <= 0|| valor.equals("")||cuenta_origen_hn != 1){
+                error.setVisible(true);
+            } else{           
+
+                int valor_int = Integer.valueOf(valor);
+                /*Estos nos sirven para definir el tamaño del arreglo*/
+
+                int cantH = define.cant_var(hn);
+                tamH = new String[cantH];
+
+                if((cantH <= index_origen_hn)){
+                    error.setVisible(true);
+                } else{
+                    /*Separamos los datos de las comas y los guardamos en una lista*/
+
+                    for(String numero: hn.split(","))
+                        lista2.add(numero.trim());
+                    ///////////////////////////////////////////////////////////////////
+
+                    /*Guardamos las listas en arreglos :D*/
+                    Hh = convierte.aMatriz(lista2);
+
+                    Hh = calculando.dividePosiciones(Hh, valor_int);
+                    
+                    if(!bandera){
+                        Responde.setText("La atenuación es: \n");
+                        Resultado.setText(null);
+                    }
+                    Resultado.append(""+Hh[0]);
+                    for(int pepe = 1;pepe<Hh.length;pepe++){
+                        Resultado.append(", "+Hh[pepe]);
+                    }
+                }
+            }            
+        }
+        if(gn.equals("") && hn.equals("")){
+            error.setVisible(true);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -1985,6 +1972,14 @@ public class Senales extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Refleja1ActionPerformed
 
+    private void valorInt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorInt3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_valorInt3ActionPerformed
+
+    private void valorInt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorInt4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_valorInt4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2061,6 +2056,8 @@ public class Senales extends javax.swing.JFrame {
     private javax.swing.JTextField nText;
     private javax.swing.JTextField valorInt;
     private javax.swing.JTextField valorInt2;
+    private javax.swing.JTextField valorInt3;
+    private javax.swing.JTextField valorInt4;
     // End of variables declaration//GEN-END:variables
 }
 

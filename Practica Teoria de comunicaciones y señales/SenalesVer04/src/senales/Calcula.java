@@ -156,148 +156,56 @@ public class Calcula {
        return resta;
     }
     
-    public String[] multiplicaPosiciones(String[]g,String[]h){
-        int size;
-        int x;
-        String []multiplica;
-        String []corto;
-        boolean mayor = false;
-        if(g.length<h.length){
-            mayor = true;
-            size = h.length;
-            corto = new String[size];
-            for(x=0; x<g.length; x++){
-                corto[x] = g[x];
-            }
-            for(x=g.length; x<size; x++)
-                corto[x] = "0";
-        }else{
-            size = g.length;
-            corto = new String[size];
-            for(x=0; x<h.length; x++){
-                corto[x] = h[x];
-            }
-            for(x=h.length; x<size; x++)
-                corto[x] = "0";
-        }
-        multiplica = new String[size];
-        //System.out.println("El arreglo es de tamaño " + size);
-//        for(String w : corto){
-//            System.out.print(w + ", ");
-//        }        
-//        System.out.println("");
+    public String[] multiplicaPosiciones(String[]g, int ganancia){
+        String []multiplica = new String[g.length];
         boolean origen = false;
         float aux = 0;
-        for(int i = 0;i<size;i++){
-            if(mayor){
-                //le quitamos el signo del origen
-                if(corto[i].contains("*") && h[i].contains("*")){
-                    corto[i] = corto[i].replace("*", "");
-                    h[i] = h[i].replace("*", "");
-                    origen = true;
-                }
-                aux = Float.parseFloat(corto[i]) * Float.parseFloat(h[i]);
-                
-                //le devolvemos el signo
-                if(origen){
-                    multiplica[i] = "*" + String.format("%.02f", aux);
-                    origen = false;
-                } else{
-                    multiplica[i] = String.format("%.02f", aux);
-                }
-                //System.out.println("Se tiene la multiplicacion de "+corto[i]+" * "+h[i]+" y nos da "+suma[i]);
+        
+        for(int i = 0;i<g.length;i++){
+            
+            //le quitamos el signo del origen
+            if(g[i].contains("*")){
+                g[i] = g[i].replace("*", "");
+                origen = true;
             }
-            else{
-                //le quitamos el signo del origen
-                if(corto[i].contains("*") && g[i].contains("*")){
-                    corto[i] = corto[i].replace("*", "");
-                    g[i] = g[i].replace("*", "");
-                    origen = true;
-                }
-                aux = Float.parseFloat(corto[i]) * Float.parseFloat(g[i]);
-                
-                //le devolvemos el signo
-                if(origen){
-                    multiplica[i] = "*" + String.format("%.02f", aux);
-                    origen = false;
-                } else{
-                    multiplica[i] = String.format("%.02f", aux);
-                }
-               //System.out.println("Se tiene la multiplicacion de "+g[i]+" * "+corto[i]+" y nos da "+suma[i]);
+            aux = Float.parseFloat(g[i]) * (float)ganancia;
+
+            //le devolvemos el signo
+            if(origen){
+                multiplica[i] = "*" + String.format("%.02f", aux);
+                origen = false;
+            } else{
+                multiplica[i] = String.format("%.02f", aux);
             }
+            //System.out.println("Se tiene la multiplicacion de "+corto[i]+" * "+h[i]+" y nos da "+suma[i]);
+            
         }
        return multiplica;
     }
     
-     public String[] dividePosiciones(String[]g,String[]h){
-       int size;
-       int x;
-       String []divide;
-       String []corto;
-       boolean mayor = false;
-       if(g.length<h.length){
-            mayor = true;
-            size = h.length;
-            corto = new String[size];
-            for(x=0; x<g.length; x++){
-                corto[x] = g[x];
-            }
-            for(x=g.length; x<size; x++)
-                corto[x] = "0";
-        }else{
-            size = g.length;
-            corto = new String[size];
-            for(x=0; x<h.length; x++){
-                corto[x] = h[x];
-            }
-            for(x=h.length; x<size; x++)
-                corto[x] = "0";
-        }
-        divide = new String[size];
-        //System.out.println("El arreglo es de tamaño " + size);
-//        for(String w : corto){
-//            System.out.print(w + ", ");
-//        }        
-//        System.out.println("");
+     public String[] dividePosiciones(String[]g, int ganancia){
+       String []divide = new String[g.length];
         boolean origen = false;
         float aux = 0;
-        for(int i = 0;i<size;i++){
-            if(mayor){
-                //le quitamos el signo del origen
-                if(corto[i].contains("*") && h[i].contains("*")){
-                    corto[i] = corto[i].replace("*", "");
-                    h[i] = h[i].replace("*", "");
-                    origen = true;
-                }
-                aux = Float.parseFloat(corto[i]) / Float.parseFloat(h[i]);
-                
-                //le devolvemos el signo
-                if(origen){
-                    divide[i] = "*" + String.format("%.02f", aux);
-                    origen = false;
-                } else{
-                    divide[i] = String.format("%.02f", aux);
-                }
-                //System.out.println("Se tiene la division de "+corto[i]+" / "+h[i]+" y nos da "+suma[i]);
+        
+        for(int i = 0;i<g.length;i++){
+            
+            //le quitamos el signo del origen
+            if(g[i].contains("*")){
+                g[i] = g[i].replace("*", "");
+                origen = true;
             }
-            else{
-                //le quitamos el signo del origen
-                if(corto[i].contains("*") && g[i].contains("*")){
-                    corto[i] = corto[i].replace("*", "");
-                    g[i] = g[i].replace("*", "");
-                    origen = true;
-                }
-                aux = Float.parseFloat(g[i]) / Float.parseFloat(corto[i]);
-                
-                //le devolvemos el signo
-                if(origen){
-                    divide[i] = "*" + String.format("%.02f", aux);
-                    origen = false;
-                } else{
-                    divide[i] = String.format("%.02f", aux);
-                }
-               //System.out.println("Se tiene la division de "+g[i]+" / "+corto[i]+" y nos da "+suma[i]);
+            aux = Float.parseFloat(g[i]) / (float)ganancia;
+
+            //le devolvemos el signo
+            if(origen){
+                divide[i] = "*" + String.format("%.02f", aux);
+                origen = false;
+            } else{
+                divide[i] = String.format("%.02f", aux);
             }
+            //System.out.println("Se tiene la multiplicacion de "+corto[i]+" * "+h[i]+" y nos da "+suma[i]);
+            
         }
        return divide;
     }
