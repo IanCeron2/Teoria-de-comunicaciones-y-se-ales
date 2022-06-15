@@ -47,6 +47,7 @@ public class Senales extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -58,6 +59,9 @@ public class Senales extends javax.swing.JFrame {
         Refleja1 = new javax.swing.JButton();
         valorInt3 = new javax.swing.JTextField();
         valorInt4 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         nText = new javax.swing.JTextField();
@@ -132,7 +136,7 @@ public class Senales extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setText("Graficar");
+        jButton6.setText("Gráfica entrada");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -145,6 +149,13 @@ public class Senales extends javax.swing.JFrame {
 
         jLabel4.setText("y agrega un '*' antes del valor para indicar cua es el origen");
 
+        jButton9.setText("Gráfica salida");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -156,17 +167,10 @@ public class Senales extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
+                        .addGap(14, 14, 14)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jButton6)
-                                .addGap(29, 29, 29)
-                                .addComponent(jButton5))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Hn, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Gn, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(Hn, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Gn, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(jLabel3))
@@ -175,7 +179,15 @@ public class Senales extends javax.swing.JFrame {
                         .addComponent(jLabel4))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(92, 92, 92)
-                        .addComponent(jLabel14)))
+                        .addComponent(jLabel14))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton6)
+                        .addGap(10, 10, 10)
+                        .addComponent(jButton9)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton5)
+                        .addGap(8, 8, 8)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -196,9 +208,10 @@ public class Senales extends javax.swing.JFrame {
                     .addComponent(Hn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton6)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton9))
                 .addContainerGap())
         );
 
@@ -271,6 +284,15 @@ public class Senales extends javax.swing.JFrame {
             }
         });
 
+        jLabel13.setFont(new java.awt.Font("Carlito", 0, 18)); // NOI18N
+        jLabel13.setText("n =");
+
+        jLabel15.setFont(new java.awt.Font("Carlito", 0, 18)); // NOI18N
+        jLabel15.setText("n /");
+
+        jLabel16.setFont(new java.awt.Font("Carlito", 0, 18)); // NOI18N
+        jLabel16.setText("n =");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -286,11 +308,17 @@ public class Senales extends javax.swing.JFrame {
                     .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel16)
+                        .addComponent(jLabel15)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(valorInt2, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
-                    .addComponent(valorInt4, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
-                    .addComponent(valorInt3))
-                .addGap(0, 20, Short.MAX_VALUE))
+                    .addComponent(valorInt3, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                    .addComponent(valorInt4)
+                    .addComponent(valorInt2))
+                .addContainerGap())
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(Refleja1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -299,21 +327,28 @@ public class Senales extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(valorInt3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton4)
-                        .addComponent(valorInt4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton2))
+                        .addComponent(jButton1)
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(valorInt3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(valorInt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10)
-                    .addComponent(Refleja))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton4)
+                    .addComponent(jLabel15)
+                    .addComponent(valorInt4, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton10)
+                        .addComponent(jLabel16))
+                    .addComponent(Refleja)
+                    .addComponent(valorInt2))
                 .addGap(18, 18, 18)
                 .addComponent(Refleja1)
                 .addGap(5, 5, 5))
@@ -322,7 +357,7 @@ public class Senales extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Diezmación", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Carlito", 0, 12))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Carlito", 0, 18)); // NOI18N
-        jLabel8.setText("n=");
+        jLabel8.setText("n =");
 
         jButton7.setText("Diezmación.");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -348,10 +383,13 @@ public class Senales extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(nText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(nText)
+                        .addGap(2, 2, 2))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel8)
+                        .addComponent(jButton7)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -400,7 +438,7 @@ public class Senales extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valorInt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valorInt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
                     .addComponent(jButton8))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -423,10 +461,10 @@ public class Senales extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -447,7 +485,7 @@ public class Senales extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -1766,7 +1804,7 @@ public class Senales extends javax.swing.JFrame {
     }//GEN-LAST:event_ReflejaActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        //Grafica
+        //Grafica de entrada
         Define define = new Define();
         Convertidor convierte = new Convertidor();
         //Error error = new Error();
@@ -1869,6 +1907,8 @@ public class Senales extends javax.swing.JFrame {
         nText.setText("");
         valorInt2.setText("");
         valorInt.setText("");
+        valorInt3.setText("");
+        valorInt4.setText("");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void valorInt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorInt2ActionPerformed
@@ -1980,6 +2020,99 @@ public class Senales extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_valorInt4ActionPerformed
 
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        //Grafica de entrada
+        Define define = new Define();
+        Convertidor convierte = new Convertidor();
+        Error error = new Error();
+        
+        /*Arreglos donde guardaremos los datos de las listas y donde se haran las operaciones*/
+        /*Estas dos son sobre las que se haran los calculos*/
+        String Gh[];
+        String Hh[];
+
+        /*Aqui estan las acomodadas*/
+        String Gh1[]; //Aqui estaran guardados los valores del origen para adeltane
+        String Hh1[]; //Aqui estaran guardados los valores del origen para adeltane
+        String Gh2[]; //Aqui estaran guardados los valores del origen para atras
+        String Hh2[]; //Aqui estaran guardados los valores del origen para adeltane
+        ////////////////////////////////////////////
+
+        /*Declaramos las listas donde se guardaran los datos*/
+        ArrayList<String> lista = new ArrayList<String>();
+        ArrayList<String> lista2 = new ArrayList<String>();
+        //////////////////////////////////////////
+        
+        String output_resultado = Resultado.getText().toString();
+        if(!output_resultado.equals("")){
+            
+            String[] aux = output_resultado.split("\n\n");
+            System.out.println(aux.length);
+            /*Aqui guardamos las cajas de teto*/
+            String gn = aux[0];
+            String hn;
+                    
+            if(aux.length == 2)
+                hn = aux[1];
+            else
+                hn = "";
+            
+            //validamos que ambas funciones tengan definido cual es el elemento de origen y que solo sea un solo origen            
+            String[] valida_origen_gn = gn.split(",");
+            
+            int index_origen_gn = 0;
+            for(int i = 0; i < valida_origen_gn.length; i++){
+                if(valida_origen_gn[i].contains("*")){
+                    index_origen_gn = i;
+                }
+            }
+            String[] valida_origen_hn = hn.split(",");
+            int index_origen_hn = 0;
+            for(int i = 0; i < valida_origen_hn.length; i++){
+                if(valida_origen_hn[i].contains("*")){
+                    index_origen_hn = i;
+                }
+            }
+
+            /*Separamos los datos de las comas y los guardamos en una lista :D*/
+            for(String numero: gn.split(","))
+                lista.add(numero.trim());
+
+            for(String numero: hn.split(","))
+                lista2.add(numero.trim());
+            ///////////////////////////////////////////////////////////////////
+
+            /*Guardamos las listas en arreglos :D*/
+            Gh = convierte.aMatriz(lista);
+            Hh = convierte.aMatriz(lista2);
+            ////////////////////////////////////////////////////////////////////
+
+            /*Ahora identificaremos cuales son los origenes de cada funcion, solo se obtendra un nuevo arreglito
+            a partir de nuestro origen y sumaremos esa parte, la parte que esta atras del origen
+            pues las definiremos despues y se sumaran en otra seccion :D*/
+            Gh1 = define.origen(Gh, index_origen_gn);
+            Hh1 = define.origen(Hh, index_origen_hn);
+
+            Gh2 = define.origen_a(Gh, index_origen_gn);
+            Hh2 = define.origen_a(Hh, index_origen_hn);
+
+            //Gh2 = define.acomodador(Gh2);
+            //Hh2 = define.acomodador(Hh2);
+
+            if(gn.equals("")){
+                Gh1 = new String[0];
+                Gh2 = new String[0];
+            }
+
+            if(hn.equals("")){
+                Hh1 = new String[0];
+                Hh2 = new String[0];
+            }
+            GraficaA gra = new GraficaA(Gh1, Gh2, Hh1, Hh2);
+        } else
+            error.setVisible(true);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2035,12 +2168,16 @@ public class Senales extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
